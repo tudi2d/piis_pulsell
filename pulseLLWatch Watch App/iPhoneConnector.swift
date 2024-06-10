@@ -4,6 +4,7 @@
 //
 //  Created by Tristan Häuser on 10.06.24.
 //
+// Sets up connection between AppleWatch -> iPhone
 
 import Foundation
 import WatchConnectivity
@@ -21,4 +22,5 @@ class iPhoneConnector: NSObject, WCSessionDelegate, ObservableObject {
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: (any Error)?){
     }
+    
 }

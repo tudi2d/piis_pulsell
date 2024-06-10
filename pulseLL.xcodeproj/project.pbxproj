@@ -14,6 +14,9 @@
 		E90B0A202C171F8D00D65BBE /* pulseLLWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E90B0A132C171F8B00D65BBE /* pulseLLWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E90B0A262C171FA900D65BBE /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A252C171FA900D65BBE /* WatchConnector.swift */; };
 		E90B0A282C171FCB00D65BBE /* iPhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A272C171FCB00D65BBE /* iPhoneConnector.swift */; };
+		E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A312C172EF100D65BBE /* pulseLLTabView.swift */; };
+		E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A332C172EFD00D65BBE /* HomeView.swift */; };
+		E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A352C172F0B00D65BBE /* HeartRateView.swift */; };
 		E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAC2C16FA070035C836 /* pulseLLApp.swift */; };
 		E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAE2C16FA070035C836 /* ContentView.swift */; };
 		E9953FB12C16FA0A0035C836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB02C16FA0A0035C836 /* Assets.xcassets */; };
@@ -52,6 +55,12 @@
 		E90B0A1C2C171F8D00D65BBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E90B0A252C171FA900D65BBE /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		E90B0A272C171FCB00D65BBE /* iPhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneConnector.swift; sourceTree = "<group>"; };
+		E90B0A312C172EF100D65BBE /* pulseLLTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pulseLLTabView.swift; sourceTree = "<group>"; };
+		E90B0A332C172EFD00D65BBE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E90B0A352C172F0B00D65BBE /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		E90B0A372C1731C300D65BBE /* pulseLL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pulseLL.entitlements; sourceTree = "<group>"; };
+		E90B0A382C1731D900D65BBE /* pulseLLWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pulseLLWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		E90B0A392C17341400D65BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E9953FA92C16FA070035C836 /* pulseLL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pulseLL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9953FAC2C16FA070035C836 /* pulseLLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pulseLLApp.swift; sourceTree = "<group>"; };
 		E9953FAE2C16FA070035C836 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +89,7 @@
 		E90B0A142C171F8B00D65BBE /* pulseLLWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				E90B0A382C1731D900D65BBE /* pulseLLWatch Watch App.entitlements */,
 				E90B0A152C171F8B00D65BBE /* pulseLLWatchApp.swift */,
 				E90B0A172C171F8B00D65BBE /* ContentView.swift */,
 				E90B0A272C171FCB00D65BBE /* iPhoneConnector.swift */,
@@ -118,6 +128,8 @@
 		E9953FAB2C16FA070035C836 /* pulseLL */ = {
 			isa = PBXGroup;
 			children = (
+				E90B0A392C17341400D65BBE /* Info.plist */,
+				E90B0A372C1731C300D65BBE /* pulseLL.entitlements */,
 				E9953FAC2C16FA070035C836 /* pulseLLApp.swift */,
 				E9953FAE2C16FA070035C836 /* ContentView.swift */,
 				E90B0A252C171FA900D65BBE /* WatchConnector.swift */,
@@ -131,6 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */,
+				E90B0A312C172EF100D65BBE /* pulseLLTabView.swift */,
+				E90B0A332C172EFD00D65BBE /* HomeView.swift */,
+				E90B0A352C172F0B00D65BBE /* HeartRateView.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -249,7 +264,10 @@
 			files = (
 				E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */,
 				E90B0A262C171FA900D65BBE /* WatchConnector.swift in Sources */,
+				E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */,
+				E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */,
 				E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */,
+				E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "pulseLLWatch Watch App/pulseLLWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLLWatch Watch App/Preview Content\"";
@@ -299,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "pulseLLWatch Watch App/pulseLLWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLLWatch Watch App/Preview Content\"";
@@ -449,12 +469,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = pulseLL/pulseLL.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
 				DEVELOPMENT_TEAM = FY482T2YCZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = pulseLL/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -465,8 +488,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.th.pulseLL;
+				PRODUCT_BUNDLE_IDENTIFIER = de.th.pulseLL.iPhoneApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -479,12 +503,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = pulseLL/pulseLL.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
 				DEVELOPMENT_TEAM = FY482T2YCZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = pulseLL/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,8 +522,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.th.pulseLL;
+				PRODUCT_BUNDLE_IDENTIFIER = de.th.pulseLL.iPhoneApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
