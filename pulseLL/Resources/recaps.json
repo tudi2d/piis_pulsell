@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Afternoon Run",
+    "genre": "Techno",
+    "time": "00:39:52",
+    "bpm": 158
+  },
+  {
+    "id": 2,
+    "title": "Morning Jog",
+    "genre": "House",
+    "time": "00:25:47",
+    "bpm": 130
+  },
+  {
+    "id": 3,
+    "title": "Evening Sprint",
+    "genre": "Trance",
+    "time": "00:15:35",
+    "bpm": 165
+  },
+  {
+    "id": 4,
+    "title": "Night Walk",
+    "genre": "Ambient",
+    "time": "01:05:12",
+    "bpm": 120
+  },
+  {
+    "id": 5,
+    "title": "Lunch Break Run",
+    "genre": "Drum & Bass",
+    "time": "00:45:23",
+    "bpm": 150
+  }
+]

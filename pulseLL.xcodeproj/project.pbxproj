@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA447C2C41436B000F3AC4 /* RecapItem.swift */; };
+		17EA44812C4144F9000F3AC4 /* RecapList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44802C4144F9000F3AC4 /* RecapList.swift */; };
+		17EA44862C4146E5000F3AC4 /* Recap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44852C4146E5000F3AC4 /* Recap.swift */; };
+		17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44872C414AD8000F3AC4 /* ModelData.swift */; };
+		17EA448A2C414B1A000F3AC4 /* recaps.json in Resources */ = {isa = PBXBuildFile; fileRef = 17EA44892C414B1A000F3AC4 /* recaps.json */; };
 		E90B0A162C171F8B00D65BBE /* pulseLLWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A152C171F8B00D65BBE /* pulseLLWatchApp.swift */; };
 		E90B0A182C171F8B00D65BBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A172C171F8B00D65BBE /* ContentView.swift */; };
 		E90B0A1A2C171F8D00D65BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90B0A192C171F8D00D65BBE /* Assets.xcassets */; };
@@ -48,6 +53,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17EA447C2C41436B000F3AC4 /* RecapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapItem.swift; sourceTree = "<group>"; };
+		17EA44802C4144F9000F3AC4 /* RecapList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapList.swift; sourceTree = "<group>"; };
+		17EA44852C4146E5000F3AC4 /* Recap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recap.swift; sourceTree = "<group>"; };
+		17EA44872C414AD8000F3AC4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		17EA44892C414B1A000F3AC4 /* recaps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recaps.json; sourceTree = "<group>"; };
 		E90B0A132C171F8B00D65BBE /* pulseLLWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pulseLLWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90B0A152C171F8B00D65BBE /* pulseLLWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pulseLLWatchApp.swift; sourceTree = "<group>"; };
 		E90B0A172C171F8B00D65BBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +96,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17626A422C413689006922C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9953FAE2C16FA070035C836 /* ContentView.swift */,
+				17EA447C2C41436B000F3AC4 /* RecapItem.swift */,
+				17EA44802C4144F9000F3AC4 /* RecapList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17626A432C413699006922C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17EA44852C4146E5000F3AC4 /* Recap.swift */,
+				17EA44872C414AD8000F3AC4 /* ModelData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17626A452C4136B3006922C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E90B0A252C171FA900D65BBE /* WatchConnector.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		17EA44822C41465D000F3AC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				17EA44892C414B1A000F3AC4 /* recaps.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E90B0A142C171F8B00D65BBE /* pulseLLWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +173,13 @@
 		E9953FAB2C16FA070035C836 /* pulseLL */ = {
 			isa = PBXGroup;
 			children = (
+				17626A422C413689006922C1 /* Views */,
 				E90B0A392C17341400D65BBE /* Info.plist */,
 				E90B0A372C1731C300D65BBE /* pulseLL.entitlements */,
+				17EA44822C41465D000F3AC4 /* Resources */,
 				E9953FAC2C16FA070035C836 /* pulseLLApp.swift */,
-				E9953FAE2C16FA070035C836 /* ContentView.swift */,
-				E90B0A252C171FA900D65BBE /* WatchConnector.swift */,
+				17626A432C413699006922C1 /* Models */,
+				17626A452C4136B3006922C1 /* Utils */,
 				E9953FB02C16FA0A0035C836 /* Assets.xcassets */,
 				E9953FB22C16FA0A0035C836 /* Preview Content */,
 			);
@@ -242,6 +289,7 @@
 			files = (
 				E9953FB42C16FA0A0035C836 /* Preview Assets.xcassets in Resources */,
 				E9953FB12C16FA0A0035C836 /* Assets.xcassets in Resources */,
+				17EA448A2C414B1A000F3AC4 /* recaps.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +311,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */,
+				17EA44862C4146E5000F3AC4 /* Recap.swift in Sources */,
+				17EA44812C4144F9000F3AC4 /* RecapList.swift in Sources */,
 				E90B0A262C171FA900D65BBE /* WatchConnector.swift in Sources */,
 				E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */,
 				E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */,
+				17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */,
+				17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */,
 				E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */,
 				E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */,
 			);
@@ -291,18 +343,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLLWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = pulseLLWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.th.pulseLL;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.pulseLL.pulseLLApp;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.th.pulseLL.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.pulseLL.pulseLLApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -322,18 +374,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLLWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = pulseLLWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.th.pulseLL;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.pulseLL.pulseLLApp;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.th.pulseLL.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.pulseLL.pulseLLApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -474,7 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;
@@ -488,7 +540,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.th.pulseLL.iPhoneApp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.pulseLL.pulseLLApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -508,7 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;
@@ -522,7 +574,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.th.pulseLL.iPhoneApp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.pulseLL.pulseLLApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
