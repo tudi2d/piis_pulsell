@@ -2,7 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Privacy - Health ShareUsage Description</key>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Your workout data is used to provide you with a custom song for your training</string>
+	<key>NSHealthShareUsageDescription</key>
 	<string>Your workout data is used to provide you with a custom song for your training</string>
 </dict>
 </plist>

@@ -8,7 +8,7 @@
 import Foundation
 import HealthKit
 
-class HealthStore: ObservableObject {
+class WorkoutManager: ObservableObject {
     let healthStore = HKHealthStore()
     
     func startWorkout() {

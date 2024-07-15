@@ -9,8 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @StateObject private var healthStore = HealthStore()
-
+    @StateObject private var workoutManager = WorkoutManager()
     
     var body: some View {
         NavigationStack{
@@ -53,7 +52,7 @@ struct ContentView: View {
             .padding()
         }
         .onAppear{
-            healthStore.requestAuthorization()
+            workoutManager.requestAuthorization()
         }
     }
 }
