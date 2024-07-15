@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct MainView: View {
+struct WorkoutView: View {
     var body: some View {
         ZStack{
             VStack {
@@ -18,9 +18,10 @@ struct MainView: View {
             }
         }
         .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
     }
 }
 
 #Preview {
-    MainView()
+    WorkoutView()
 }
