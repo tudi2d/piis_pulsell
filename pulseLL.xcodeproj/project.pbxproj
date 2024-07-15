@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		17E3EBF32C4522D100F6ACB2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */; };
 		17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */; };
+		17E3EBF72C4528A600F6ACB2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */; };
+		17E3EBFB2C45297000F6ACB2 /* WorkoutStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBFA2C45297000F6ACB2 /* WorkoutStats.swift */; };
+		17E3EBFD2C4530CF00F6ACB2 /* WorkoutMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBFC2C4530CF00F6ACB2 /* WorkoutMap.swift */; };
+		17E3EBFF2C45310700F6ACB2 /* WorkoutControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBFE2C45310700F6ACB2 /* WorkoutControl.swift */; };
 		17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA447C2C41436B000F3AC4 /* RecapItem.swift */; };
 		17EA44812C4144F9000F3AC4 /* RecapList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44802C4144F9000F3AC4 /* RecapList.swift */; };
 		17EA44862C4146E5000F3AC4 /* Recap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44852C4146E5000F3AC4 /* Recap.swift */; };
@@ -57,6 +61,10 @@
 /* Begin PBXFileReference section */
 		17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDropdown.swift; sourceTree = "<group>"; };
+		17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		17E3EBFA2C45297000F6ACB2 /* WorkoutStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStats.swift; sourceTree = "<group>"; };
+		17E3EBFC2C4530CF00F6ACB2 /* WorkoutMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMap.swift; sourceTree = "<group>"; };
+		17E3EBFE2C45310700F6ACB2 /* WorkoutControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutControl.swift; sourceTree = "<group>"; };
 		17EA447C2C41436B000F3AC4 /* RecapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapItem.swift; sourceTree = "<group>"; };
 		17EA44802C4144F9000F3AC4 /* RecapList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapList.swift; sourceTree = "<group>"; };
 		17EA44852C4146E5000F3AC4 /* Recap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recap.swift; sourceTree = "<group>"; };
@@ -103,8 +111,8 @@
 		17626A422C413689006922C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				17E3EBF12C45223000F6ACB2 /* Onboarding */,
 				17E3EBF02C45222900F6ACB2 /* Workout */,
+				17E3EBF12C45223000F6ACB2 /* Onboarding */,
 				E9953FAE2C16FA070035C836 /* ContentView.swift */,
 				17EA447C2C41436B000F3AC4 /* RecapItem.swift */,
 				17EA44802C4144F9000F3AC4 /* RecapList.swift */,
@@ -132,6 +140,10 @@
 		17E3EBF02C45222900F6ACB2 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
+				17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */,
+				17E3EBFE2C45310700F6ACB2 /* WorkoutControl.swift */,
+				17E3EBFA2C45297000F6ACB2 /* WorkoutStats.swift */,
+				17E3EBFC2C4530CF00F6ACB2 /* WorkoutMap.swift */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -334,12 +346,16 @@
 			files = (
 				E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */,
 				17EA44862C4146E5000F3AC4 /* Recap.swift in Sources */,
+				17E3EBF72C4528A600F6ACB2 /* WorkoutView.swift in Sources */,
 				17EA44812C4144F9000F3AC4 /* RecapList.swift in Sources */,
+				17E3EBFD2C4530CF00F6ACB2 /* WorkoutMap.swift in Sources */,
 				E90B0A262C171FA900D65BBE /* WatchConnector.swift in Sources */,
+				17E3EBFB2C45297000F6ACB2 /* WorkoutStats.swift in Sources */,
 				E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */,
 				E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */,
 				17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */,
 				17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */,
+				17E3EBFF2C45310700F6ACB2 /* WorkoutControl.swift in Sources */,
 				17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */,
 				E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */,
 				E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */,
