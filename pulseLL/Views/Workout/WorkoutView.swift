@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct WorkoutView: View {
+    @StateObject private var workoutManager = WorkoutManager()
+    
     var body: some View {
         ZStack{
             VStack {
@@ -19,6 +21,9 @@ struct WorkoutView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
+        .onAppear{
+            workoutManager.startWorkout()
+        }
     }
 }
 
