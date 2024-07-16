@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709ED342C45A02100A83FF2 /* HealthKitUtils.swift */; };
 		1709ED372C45A22A00A83FF2 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */; };
+		1796163C2C4671D400A5B474 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796163B2C4671D400A5B474 /* LocationModel.swift */; };
 		17E3EBF32C4522D100F6ACB2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */; };
 		17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */; };
 		17E3EBF72C4528A600F6ACB2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		1709ED342C45A02100A83FF2 /* HealthKitUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitUtils.swift; sourceTree = "<group>"; };
 		1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		1796163B2C4671D400A5B474 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDropdown.swift; sourceTree = "<group>"; };
 		17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				17EA44852C4146E5000F3AC4 /* Recap.swift */,
 				17EA44872C414AD8000F3AC4 /* ModelData.swift */,
+				1796163B2C4671D400A5B474 /* LocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				1709ED372C45A22A00A83FF2 /* WorkoutManager.swift in Sources */,
 				E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */,
 				E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */,
+				1796163C2C4671D400A5B474 /* LocationModel.swift in Sources */,
 				1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */,
 				17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */,
 				17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */,

@@ -56,7 +56,7 @@ class WorkoutManager: ObservableObject {
         
         print("CURRENT HR: ", heartRateValue)
         DispatchQueue.main.async {
-            self.heartRate = heartRateValue
+            self.heartRate = heartRateValue 
         }
     }
     

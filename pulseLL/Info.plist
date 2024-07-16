@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is used to display travelded distance &amp; personalise the song</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Your workout data is used to provide you with a custom song for your training</string>
 	<key>NSHealthShareUsageDescription</key>
