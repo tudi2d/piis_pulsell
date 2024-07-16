@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct WorkoutMap: View {
-    @StateObject private var locationModel = LocationModel()
+    @StateObject private var locationModel = LocationManager()
     @State private var cameraPosition = MapCameraPosition.region(
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), // Default to San Francisco

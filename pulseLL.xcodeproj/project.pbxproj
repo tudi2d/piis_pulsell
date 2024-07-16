@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709ED342C45A02100A83FF2 /* HealthKitUtils.swift */; };
 		1709ED372C45A22A00A83FF2 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */; };
-		1796163C2C4671D400A5B474 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796163B2C4671D400A5B474 /* LocationModel.swift */; };
+		1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796163B2C4671D400A5B474 /* LocationManager.swift */; };
+		17D399752C46FDC7005A9180 /* PolarBleSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 17D399742C46FDC7005A9180 /* PolarBleSdk */; };
+		17D399772C470104005A9180 /* PolarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D399762C470104005A9180 /* PolarAPI.swift */; };
+		17D399792C470BE9005A9180 /* DeviceSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D399782C470BE9005A9180 /* DeviceSearchView.swift */; };
 		17E3EBF32C4522D100F6ACB2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */; };
 		17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */; };
 		17E3EBF72C4528A600F6ACB2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */; };
@@ -18,7 +21,7 @@
 		17E3EBFF2C45310700F6ACB2 /* WorkoutControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBFE2C45310700F6ACB2 /* WorkoutControl.swift */; };
 		17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA447C2C41436B000F3AC4 /* RecapItem.swift */; };
 		17EA44812C4144F9000F3AC4 /* RecapList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44802C4144F9000F3AC4 /* RecapList.swift */; };
-		17EA44862C4146E5000F3AC4 /* Recap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44852C4146E5000F3AC4 /* Recap.swift */; };
+		17EA44862C4146E5000F3AC4 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44852C4146E5000F3AC4 /* Workout.swift */; };
 		17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA44872C414AD8000F3AC4 /* ModelData.swift */; };
 		17EA448A2C414B1A000F3AC4 /* recaps.json in Resources */ = {isa = PBXBuildFile; fileRef = 17EA44892C414B1A000F3AC4 /* recaps.json */; };
 		E90B0A162C171F8B00D65BBE /* pulseLLWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A152C171F8B00D65BBE /* pulseLLWatchApp.swift */; };
@@ -64,7 +67,9 @@
 /* Begin PBXFileReference section */
 		1709ED342C45A02100A83FF2 /* HealthKitUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitUtils.swift; sourceTree = "<group>"; };
 		1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
-		1796163B2C4671D400A5B474 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		1796163B2C4671D400A5B474 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		17D399762C470104005A9180 /* PolarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarAPI.swift; sourceTree = "<group>"; };
+		17D399782C470BE9005A9180 /* DeviceSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSearchView.swift; sourceTree = "<group>"; };
 		17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDropdown.swift; sourceTree = "<group>"; };
 		17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
@@ -73,7 +78,7 @@
 		17E3EBFE2C45310700F6ACB2 /* WorkoutControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutControl.swift; sourceTree = "<group>"; };
 		17EA447C2C41436B000F3AC4 /* RecapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapItem.swift; sourceTree = "<group>"; };
 		17EA44802C4144F9000F3AC4 /* RecapList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapList.swift; sourceTree = "<group>"; };
-		17EA44852C4146E5000F3AC4 /* Recap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recap.swift; sourceTree = "<group>"; };
+		17EA44852C4146E5000F3AC4 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		17EA44872C414AD8000F3AC4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		17EA44892C414B1A000F3AC4 /* recaps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recaps.json; sourceTree = "<group>"; };
 		E90B0A132C171F8B00D65BBE /* pulseLLWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pulseLLWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D399752C46FDC7005A9180 /* PolarBleSdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +136,7 @@
 				17E3EBF02C45222900F6ACB2 /* Workout */,
 				17E3EBF12C45223000F6ACB2 /* Onboarding */,
 				E9953FAE2C16FA070035C836 /* ContentView.swift */,
+				17D399782C470BE9005A9180 /* DeviceSearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,9 +144,8 @@
 		17626A432C413699006922C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				17EA44852C4146E5000F3AC4 /* Recap.swift */,
+				17EA44852C4146E5000F3AC4 /* Workout.swift */,
 				17EA44872C414AD8000F3AC4 /* ModelData.swift */,
-				1796163B2C4671D400A5B474 /* LocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,7 +162,9 @@
 		177D8BB02C45AA6600E1D144 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1796163B2C4671D400A5B474 /* LocationManager.swift */,
 				1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */,
+				17D399762C470104005A9180 /* PolarAPI.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +299,9 @@
 				E90B0A1F2C171F8D00D65BBE /* PBXTargetDependency */,
 			);
 			name = pulseLL;
+			packageProductDependencies = (
+				17D399742C46FDC7005A9180 /* PolarBleSdk */,
+			);
 			productName = pulseLL;
 			productReference = E9953FA92C16FA070035C836 /* pulseLL.app */;
 			productType = "com.apple.product-type.application";
@@ -322,6 +333,9 @@
 				Base,
 			);
 			mainGroup = E9953FA02C16FA070035C836;
+			packageReferences = (
+				17D399732C46FDC7005A9180 /* XCRemoteSwiftPackageReference "polar-ble-sdk" */,
+			);
 			productRefGroup = E9953FAA2C16FA070035C836 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,7 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */,
-				17EA44862C4146E5000F3AC4 /* Recap.swift in Sources */,
+				17EA44862C4146E5000F3AC4 /* Workout.swift in Sources */,
 				17E3EBF72C4528A600F6ACB2 /* WorkoutView.swift in Sources */,
 				17EA44812C4144F9000F3AC4 /* RecapList.swift in Sources */,
 				17E3EBFD2C4530CF00F6ACB2 /* WorkoutMap.swift in Sources */,
@@ -379,14 +393,16 @@
 				1709ED372C45A22A00A83FF2 /* WorkoutManager.swift in Sources */,
 				E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */,
 				E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */,
-				1796163C2C4671D400A5B474 /* LocationModel.swift in Sources */,
+				1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */,
 				1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */,
 				17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */,
 				17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */,
 				17E3EBFF2C45310700F6ACB2 /* WorkoutControl.swift in Sources */,
 				17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */,
 				E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */,
+				17D399772C470104005A9180 /* PolarAPI.swift in Sources */,
 				E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */,
+				17D399792C470BE9005A9180 /* DeviceSearchView.swift in Sources */,
 				17E3EBF32C4522D100F6ACB2 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +614,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to provide you with a custom song for your training";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout data is used to provide you with a custom song for your training";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to display travelded distance & personalise the song";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -632,6 +651,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to provide you with a custom song for your training";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout data is used to provide you with a custom song for your training";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to display travelded distance & personalise the song";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -682,6 +704,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17D399732C46FDC7005A9180 /* XCRemoteSwiftPackageReference "polar-ble-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/polarofficial/polar-ble-sdk.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17D399742C46FDC7005A9180 /* PolarBleSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D399732C46FDC7005A9180 /* XCRemoteSwiftPackageReference "polar-ble-sdk" */;
+			productName = PolarBleSdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9953FA12C16FA070035C836 /* Project object */;
 }

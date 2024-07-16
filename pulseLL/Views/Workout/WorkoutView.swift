@@ -10,6 +10,7 @@ import SwiftUI
 
 struct WorkoutView: View {
     @StateObject private var workoutManager = WorkoutManager()
+    @StateObject var bleSdkManager = PolarBleSdkManager()
     
     var body: some View {
         ZStack{

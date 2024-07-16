@@ -15,7 +15,6 @@ struct OnboardingView: View {
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
-                // Dropdowns
                 OnboardingDropdown(label: "Workout", selectedOption: $selectedWorkout, options: ["Running", "Cycling", "Swimming"])
                 OnboardingDropdown(label: "Genre", selectedOption: $selectedGenre, options: ["Techno", "Rock", "EDM", "House"])
                 
