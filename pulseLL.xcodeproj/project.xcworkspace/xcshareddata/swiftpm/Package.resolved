@@ -1,21 +1,13 @@
 {
-<<<<<<< HEAD
   "originHash" : "04b85e333a5c7140358d36ca058ef6e434a5ae78187e20ded3ba71302ba4bbbb",
-=======
-<<<<<<< Updated upstream
-  "originHash" : "04b85e333a5c7140358d36ca058ef6e434a5ae78187e20ded3ba71302ba4bbbb",
-=======
-  "originHash" : "db0fd627cf0b7b0d2a50c9ccd481852bc8490038614d1ad3af398b53f3a711de",
->>>>>>> Stashed changes
->>>>>>> 08e2765 (Working request to server)
   "pins" : [
     {
       "identity" : "polar-ble-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/polarofficial/polar-ble-sdk.git",
       "state" : {
-        "revision" : "784f7ed2392bfa2f5a295e7b26a153ce6120d97f",
-        "version" : "5.5.0"
+        "revision" : "e436085dc09a3d8a07a5c525174fb24875d3b613",
+        "version" : "5.6.0"
       }
     },
     {
