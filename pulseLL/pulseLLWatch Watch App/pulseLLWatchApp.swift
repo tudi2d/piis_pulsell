@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct pulseLLWatch_Watch_AppApp: App {
-    var body: some Scene {
+    @WKApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    private let workoutManager = WorkoutManager.shared
+    @SceneBuilder var body: some Scene {
         WindowGroup {
             ControlView()
+                .environmentObject(workoutManager)
         }
     }
 }

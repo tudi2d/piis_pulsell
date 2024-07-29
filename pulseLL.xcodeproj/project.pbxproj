@@ -47,6 +47,7 @@
 		E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAE2C16FA070035C836 /* ContentView.swift */; };
 		E9953FB12C16FA0A0035C836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB02C16FA0A0035C836 /* Assets.xcassets */; };
 		E9953FB42C16FA0A0035C836 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */; };
+		E9FDA9FF2C57D33200249100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDA9FD2C57D2E200249100 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		E9953FAE2C16FA070035C836 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9953FB02C16FA0A0035C836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9FDA9FD2C57D2E200249100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				E90B0A382C1731D900D65BBE /* pulseLLWatch Watch App.entitlements */,
+				E9FDA9FD2C57D2E200249100 /* AppDelegate.swift */,
 				E90B0A152C171F8B00D65BBE /* pulseLLWatchApp.swift */,
 				E96CEDEC2C57C6D000896C0D /* ControlView.swift */,
 				E90B0A172C171F8B00D65BBE /* ContentView.swift */,
@@ -414,6 +417,7 @@
 				E96CEDF02C57C75500896C0D /* ButtonLabel.swift in Sources */,
 				E90B0A182C171F8B00D65BBE /* ContentView.swift in Sources */,
 				E96CEDEB2C57B08200896C0D /* Logger.swift in Sources */,
+				E9FDA9FF2C57D33200249100 /* AppDelegate.swift in Sources */,
 				E96CEDE72C57A7C500896C0D /* WorkoutManagerWatchOS.swift in Sources */,
 				E96CEDEA2C57AF9900896C0D /* WorkoutManager.swift in Sources */,
 				E90B0A282C171FCB00D65BBE /* iPhoneConnector.swift in Sources */,
