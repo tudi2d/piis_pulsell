@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709ED342C45A02100A83FF2 /* HealthKitUtils.swift */; };
 		1709ED372C45A22A00A83FF2 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */; };
+		1787C78A2C5796700063EA53 /* AudioStreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787C7892C5796700063EA53 /* AudioStreamManager.swift */; };
 		1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796163B2C4671D400A5B474 /* LocationManager.swift */; };
 		17D399752C46FDC7005A9180 /* PolarBleSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 17D399742C46FDC7005A9180 /* PolarBleSdk */; };
 		17D399772C470104005A9180 /* PolarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D399762C470104005A9180 /* PolarAPI.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		1709ED342C45A02100A83FF2 /* HealthKitUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitUtils.swift; sourceTree = "<group>"; };
 		1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		1787C7892C5796700063EA53 /* AudioStreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamManager.swift; sourceTree = "<group>"; };
 		1796163B2C4671D400A5B474 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		17D399762C470104005A9180 /* PolarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarAPI.swift; sourceTree = "<group>"; };
 		17D399782C470BE9005A9180 /* DeviceSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSearchView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		177D8BB02C45AA6600E1D144 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1787C7892C5796700063EA53 /* AudioStreamManager.swift */,
 				1796163B2C4671D400A5B474 /* LocationManager.swift */,
 				17D399762C470104005A9180 /* PolarAPI.swift */,
 			);
@@ -411,6 +414,7 @@
 				17D399772C470104005A9180 /* PolarAPI.swift in Sources */,
 				E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */,
 				17D399792C470BE9005A9180 /* DeviceSearchView.swift in Sources */,
+				1787C78A2C5796700063EA53 /* AudioStreamManager.swift in Sources */,
 				17E3EBF32C4522D100F6ACB2 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

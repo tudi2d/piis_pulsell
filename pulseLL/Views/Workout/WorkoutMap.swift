@@ -21,20 +21,9 @@ struct WorkoutMap: View {
         Map(position: $cameraPosition, interactionModes: .all){
                 UserAnnotation()
             }
-        .mapStyle(.standard(elevation: .flat,emphasis: .muted, pointsOfInterest: .excludingAll))
+        .mapStyle(.standard(elevation: .flat, emphasis: .muted, pointsOfInterest: .excludingAll))
             .task {
                 locationModel.startTracking()
-            }
-            .overlay {
-                ZStack {
-                    Rectangle()
-                        .fill(.gray)
-                        .blendMode(.colorBurn)
-                    
-                    Rectangle()
-                        .fill(.black)
-                        .blendMode(.hue)
-                }
             }
             .padding(0)
             .onDisappear {

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct WorkoutControl: View {
+    @StateObject private var audioStreamModel = AudioStreamManager()
+
+    
     var body: some View {
         HStack {
             Spacer()
@@ -19,12 +22,25 @@ struct WorkoutControl: View {
                     .frame(width: 50, height: 50)
             }
             Spacer()
-            Button(action: {
-                // Pause action
-            }) {
-                Image(systemName: "pause.circle.fill")
-                    .resizable()
-                    .frame(width: 50, height: 50)
+            if audioStreamModel.isPlaying {
+                Button(action: {
+                    audioStreamModel.stopStream()
+                }) {
+                    Image(systemName: "pause.circle.fill")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                }
+            } else {
+                Button(action: {
+                    // Replace with your audio stream URL
+                    if let url = URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high") {
+                        audioStreamModel.startStream(from: url)
+                    }
+                }) {
+                    Image(systemName: "play.circle.fill")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                }
             }
             Spacer()
             Button(action: {

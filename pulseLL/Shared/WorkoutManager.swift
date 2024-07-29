@@ -67,7 +67,7 @@ class WorkoutManager: NSObject, ObservableObject {
         guard let heartRateSamples = samples as? [HKQuantitySample] else {
             return
         }
-        
+
         guard let lastSample = heartRateSamples.last else {
             // Current workaround until we have properly mocked the data
             print("CURRENT HR: ", 0)
