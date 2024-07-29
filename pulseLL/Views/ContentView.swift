@@ -9,7 +9,9 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @StateObject private var workoutManager = WorkoutManager()
+    @EnvironmentObject var workoutManager: WorkoutManager
+    @State private var didStartWorkout = false
+    @State private var triggerAuthorization = false
     
     var body: some View {
         NavigationStack{
@@ -52,7 +54,8 @@ struct ContentView: View {
             .padding()
         }
         .onAppear{
-            workoutManager.requestAuthorization()
+            triggerAuthorization.toggle()
+            workoutManager.retrieveRemoteSession()
         }
     }
 }
