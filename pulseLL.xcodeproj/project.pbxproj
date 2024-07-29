@@ -17,6 +17,7 @@
 		17D399752C46FDC7005A9180 /* PolarBleSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 17D399742C46FDC7005A9180 /* PolarBleSdk */; };
 		17D399772C470104005A9180 /* PolarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D399762C470104005A9180 /* PolarAPI.swift */; };
 		17D399792C470BE9005A9180 /* DeviceSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D399782C470BE9005A9180 /* DeviceSearchView.swift */; };
+		17DC1F612C57E2EB0055F859 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC1F5F2C57E2DF0055F859 /* AppDelegate.swift */; };
 		17E3EBF32C4522D100F6ACB2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */; };
 		17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */; };
 		17E3EBF72C4528A600F6ACB2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */; };
@@ -50,7 +51,6 @@
 		E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAE2C16FA070035C836 /* ContentView.swift */; };
 		E9953FB12C16FA0A0035C836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB02C16FA0A0035C836 /* Assets.xcassets */; };
 		E9953FB42C16FA0A0035C836 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */; };
-		E9FDA9FF2C57D33200249100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDA9FD2C57D2E200249100 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +87,7 @@
 		17B097F12C57CCEE009C71FA /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		17D399762C470104005A9180 /* PolarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarAPI.swift; sourceTree = "<group>"; };
 		17D399782C470BE9005A9180 /* DeviceSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSearchView.swift; sourceTree = "<group>"; };
+		17DC1F5F2C57E2DF0055F859 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDropdown.swift; sourceTree = "<group>"; };
 		17E3EBF62C4528A600F6ACB2 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
@@ -121,7 +122,6 @@
 		E9953FAE2C16FA070035C836 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9953FB02C16FA0A0035C836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E9FDA9FD2C57D2E200249100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
 		E9FDAA002C57D71B00249100 /* pulseLLWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pulseLLWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		E9FDAA012C57D73300249100 /* pulseLL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pulseLL.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,8 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				E90B0A382C1731D900D65BBE /* pulseLLWatch Watch App.entitlements */,
-				E9FDA9FD2C57D2E200249100 /* AppDelegate.swift */,
 				E90B0A152C171F8B00D65BBE /* pulseLLWatchApp.swift */,
+				17DC1F5F2C57E2DF0055F859 /* AppDelegate.swift */,
 				E96CEDEC2C57C6D000896C0D /* ControlView.swift */,
 				E90B0A172C171F8B00D65BBE /* ContentView.swift */,
 				E90B0A272C171FCB00D65BBE /* iPhoneConnector.swift */,
@@ -430,7 +430,7 @@
 				E96CEDF02C57C75500896C0D /* ButtonLabel.swift in Sources */,
 				E90B0A182C171F8B00D65BBE /* ContentView.swift in Sources */,
 				E96CEDEB2C57B08200896C0D /* Logger.swift in Sources */,
-				E9FDA9FF2C57D33200249100 /* AppDelegate.swift in Sources */,
+				17DC1F612C57E2EB0055F859 /* AppDelegate.swift in Sources */,
 				E96CEDE72C57A7C500896C0D /* WorkoutManagerWatchOS.swift in Sources */,
 				E96CEDEA2C57AF9900896C0D /* WorkoutManager.swift in Sources */,
 				E90B0A282C171FCB00D65BBE /* iPhoneConnector.swift in Sources */,
