@@ -1,5 +1,13 @@
 {
+<<<<<<< HEAD
   "originHash" : "04b85e333a5c7140358d36ca058ef6e434a5ae78187e20ded3ba71302ba4bbbb",
+=======
+<<<<<<< Updated upstream
+  "originHash" : "04b85e333a5c7140358d36ca058ef6e434a5ae78187e20ded3ba71302ba4bbbb",
+=======
+  "originHash" : "db0fd627cf0b7b0d2a50c9ccd481852bc8490038614d1ad3af398b53f3a711de",
+>>>>>>> Stashed changes
+>>>>>>> 08e2765 (Working request to server)
   "pins" : [
     {
       "identity" : "polar-ble-sdk",

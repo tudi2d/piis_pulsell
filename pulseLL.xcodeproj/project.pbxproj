@@ -11,6 +11,9 @@
 		1709ED372C45A22A00A83FF2 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */; };
 		1787C78A2C5796700063EA53 /* AudioStreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787C7892C5796700063EA53 /* AudioStreamManager.swift */; };
 		1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796163B2C4671D400A5B474 /* LocationManager.swift */; };
+		17B097EE2C57CC6D009C71FA /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B097ED2C57CC6D009C71FA /* ServerModel.swift */; };
+		17B097F02C57CCB1009C71FA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B097EF2C57CCB1009C71FA /* NetworkManager.swift */; };
+		17B097F22C57CCEE009C71FA /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B097F12C57CCEE009C71FA /* RequestData.swift */; };
 		17D399752C46FDC7005A9180 /* PolarBleSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 17D399742C46FDC7005A9180 /* PolarBleSdk */; };
 		17D399772C470104005A9180 /* PolarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D399762C470104005A9180 /* PolarAPI.swift */; };
 		17D399792C470BE9005A9180 /* DeviceSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D399782C470BE9005A9180 /* DeviceSearchView.swift */; };
@@ -79,6 +82,9 @@
 		1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		1787C7892C5796700063EA53 /* AudioStreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamManager.swift; sourceTree = "<group>"; };
 		1796163B2C4671D400A5B474 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		17B097ED2C57CC6D009C71FA /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
+		17B097EF2C57CCB1009C71FA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		17B097F12C57CCEE009C71FA /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		17D399762C470104005A9180 /* PolarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarAPI.swift; sourceTree = "<group>"; };
 		17D399782C470BE9005A9180 /* DeviceSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSearchView.swift; sourceTree = "<group>"; };
 		17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -164,6 +170,8 @@
 			children = (
 				17EA44852C4146E5000F3AC4 /* Workout.swift */,
 				17EA44872C414AD8000F3AC4 /* ModelData.swift */,
+				17B097ED2C57CC6D009C71FA /* ServerModel.swift */,
+				17B097F12C57CCEE009C71FA /* RequestData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 		177D8BB02C45AA6600E1D144 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				17B097EF2C57CCB1009C71FA /* NetworkManager.swift */,
 				1787C7892C5796700063EA53 /* AudioStreamManager.swift */,
 				1796163B2C4671D400A5B474 /* LocationManager.swift */,
 				17D399762C470104005A9180 /* PolarAPI.swift */,
@@ -430,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B097F02C57CCB1009C71FA /* NetworkManager.swift in Sources */,
 				E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */,
 				E96CEDEF2C57C72F00896C0D /* ButtonLabel.swift in Sources */,
 				17EA44862C4146E5000F3AC4 /* Workout.swift in Sources */,
@@ -440,11 +450,13 @@
 				17E3EBFB2C45297000F6ACB2 /* WorkoutStats.swift in Sources */,
 				1709ED372C45A22A00A83FF2 /* WorkoutManager.swift in Sources */,
 				E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */,
+				17B097EE2C57CC6D009C71FA /* ServerModel.swift in Sources */,
 				E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */,
 				1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */,
 				1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */,
 				17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */,
 				17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */,
+				17B097F22C57CCEE009C71FA /* RequestData.swift in Sources */,
 				17E3EBFF2C45310700F6ACB2 /* WorkoutControl.swift in Sources */,
 				E96CEDE42C57A07100896C0D /* WorkoutManageriOS.swift in Sources */,
 				17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */,

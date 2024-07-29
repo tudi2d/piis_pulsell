@@ -12,7 +12,8 @@ import Combine
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
     @Published var userLocation: CLLocation? = nil
-    @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
+    @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined    
+    @Published var locations: [CLLocation] = []
     
     override init() {
         super.init()
@@ -38,6 +39,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         DispatchQueue.main.async {
             self.userLocation = location
+            self.locations.append(location)
         }
     }
     
