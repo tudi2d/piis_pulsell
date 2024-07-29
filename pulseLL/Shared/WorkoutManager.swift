@@ -6,11 +6,36 @@
 //
 
 import Foundation
+import os
 import HealthKit
 
-class WorkoutManager: ObservableObject {
-    let healthStore = HKHealthStore()
+class WorkoutManager: NSObject, ObservableObject {
+    struct SessionStateChange {
+        let newState: HKWorkoutSessionState
+        let date: Date
+    }
+    
+    @Published var sessionState: HKWorkoutSessionState = .notStarted
     @Published var heartRate: Int = 0
+    @Published var workout: HKWorkout?
+    
+    let typesToShare: Set = [HKQuantityType.workoutType()]
+    let typesToRead: Set = [HKQuantityType.quantityType(forIdentifier: .heartRate)]
+    
+    let healthStore = HKHealthStore()
+    var session: HKWorkoutSession?
+    
+    #if os(watchOS)
+    var builder: HKLiveWorkoutBuilder?
+    #else
+    var contextDate: Date?
+    #endif
+    
+    let asynStreamTuple = AsyncStream.makeStream(of: SessionSateChange.self, bufferingPolicy: .bufferingNewest(1))
+    
+    static let shared = WorkoutManager()
+    
+    
     
     func startWorkout() {
         let configuration = HKWorkoutConfiguration()
@@ -37,6 +62,7 @@ class WorkoutManager: ObservableObject {
         healthStore.execute(query)
     }
     
+    
     private func process(_ samples: [HKSample]?) {
         guard let heartRateSamples = samples as? [HKQuantitySample] else {
             return
@@ -56,7 +82,7 @@ class WorkoutManager: ObservableObject {
         
         print("CURRENT HR: ", heartRateValue)
         DispatchQueue.main.async {
-            self.heartRate = heartRateValue 
+            self.heartRate = heartRateValue
         }
     }
     

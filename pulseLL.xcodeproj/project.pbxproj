@@ -163,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				1796163B2C4671D400A5B474 /* LocationManager.swift */,
-				1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */,
 				17D399762C470104005A9180 /* PolarAPI.swift */,
 			);
 			path = Controller;
@@ -218,6 +217,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E96CEDE02C579A0E00896C0D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		E9953FA02C16FA070035C836 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +246,7 @@
 		E9953FAB2C16FA070035C836 /* pulseLL */ = {
 			isa = PBXGroup;
 			children = (
+				E96CEDE02C579A0E00896C0D /* Shared */,
 				177D8BB02C45AA6600E1D144 /* Controller */,
 				17626A422C413689006922C1 /* Views */,
 				E90B0A392C17341400D65BBE /* Info.plist */,

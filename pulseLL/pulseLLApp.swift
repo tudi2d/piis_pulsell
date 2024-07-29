@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct pulseLLApp: App {
+    private let workoutManager = WorkoutManager.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                ContentView()
+                    .environmentObject(workoutManager)
+            } else {
+                ContentView()
+            }
         }
     }
 }
