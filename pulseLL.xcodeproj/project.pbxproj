@@ -122,6 +122,8 @@
 		E9953FB02C16FA0A0035C836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9FDA9FD2C57D2E200249100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
+		E9FDAA002C57D71B00249100 /* pulseLLWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pulseLLWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		E9FDAA012C57D73300249100 /* pulseLL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pulseLL.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 		E9953FA02C16FA070035C836 = {
 			isa = PBXGroup;
 			children = (
+				E9FDAA002C57D71B00249100 /* pulseLLWatch Watch App.entitlements */,
 				E9953FAB2C16FA070035C836 /* pulseLL */,
 				E9953FAA2C16FA070035C836 /* Products */,
 			);
@@ -289,6 +292,7 @@
 		E9953FAB2C16FA070035C836 /* pulseLL */ = {
 			isa = PBXGroup;
 			children = (
+				E9FDAA012C57D73300249100 /* pulseLL.entitlements */,
 				E90B0A392C17341400D65BBE /* Info.plist */,
 				E96CEDE02C579A0E00896C0D /* Shared */,
 				177D8BB02C45AA6600E1D144 /* Controller */,
@@ -486,7 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "pulseLLWatch Watch App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -495,6 +499,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = pulseLLWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to provide you with a custom song for your training";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout data is used to provide you with a custom song for your training";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.pulseLL.pulseLLApp;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,7 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "pulseLLWatch Watch App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -528,6 +534,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = pulseLLWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to provide you with a custom song for your training";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout data is used to provide you with a custom song for your training";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.pulseLL.pulseLLApp;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -672,7 +680,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = pulseLL/pulseLL.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -709,7 +717,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = pulseLL/pulseLL.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

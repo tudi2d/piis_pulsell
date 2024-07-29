@@ -52,13 +52,7 @@ class WorkoutManager: NSObject, ObservableObject {
     
     private func consumeSessionStateChange(_ change: SessionStateChange) async {
         sessionState = change.newState
-        /**
-          Wait for the session to transition states before ending the builder.
-         */
         #if os(watchOS)
-        /**
-         Send the elapsed time to the iOS side.
-         */
         let elapsedTimeInterval = session?.associatedWorkoutBuilder().elapsedTime(at: change.date) ?? 0
         let elapsedTime = WorkoutElapsedTime(timeInterval: elapsedTimeInterval, date: change.date)
         if let elapsedTimeData = try? JSONEncoder().encode(elapsedTime) {

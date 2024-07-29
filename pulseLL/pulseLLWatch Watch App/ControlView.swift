@@ -17,7 +17,7 @@ struct ControlView: View {
             Button {
                 startWorkout()
             } label: {
-                ButtonLabel(title: "Start", systemImage: "figure.outdoor.cycle")
+                ButtonLabel(title: "Start", systemImage: "figure.run")
             }
             .disabled(workoutManager.sessionState.isActive)
             .tint(.green)
@@ -39,6 +39,9 @@ struct ControlView: View {
             }
             .tint(.red)
             .disabled(!workoutManager.sessionState.isActive)
+        }
+        .onAppear {
+            workoutManager.requestAuthorization()
         }
     }
     
