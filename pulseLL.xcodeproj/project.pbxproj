@@ -51,6 +51,10 @@
 		E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAE2C16FA070035C836 /* ContentView.swift */; };
 		E9953FB12C16FA0A0035C836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB02C16FA0A0035C836 /* Assets.xcassets */; };
 		E9953FB42C16FA0A0035C836 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */; };
+		E9BFBABF2C58F9E600712627 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */; };
+		E9BFBAC02C58F9E600712627 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */; };
+		E9BFBAC22C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */; };
+		E9BFBAC32C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +126,8 @@
 		E9953FAE2C16FA070035C836 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9953FB02C16FA0A0035C836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsTimelineSchedule.swift; sourceTree = "<group>"; };
 		E9FDAA002C57D71B00249100 /* pulseLLWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pulseLLWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		E9FDAA012C57D73300249100 /* pulseLL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pulseLL.entitlements; sourceTree = "<group>"; };
 		E9FDAA022C58E05B00249100 /* pulseLLWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "pulseLLWatch-Watch-App-Info.plist"; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 				1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */,
 				E96CEDE52C57A7C500896C0D /* WorkoutManagerWatchOS.swift */,
 				E96CEDE32C57A07100896C0D /* WorkoutManageriOS.swift */,
+				E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */,
+				E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */,
 				E96CEDE82C57AD2400896C0D /* Logger.swift */,
 				E96CEDEE2C57C72F00896C0D /* ButtonLabel.swift */,
 			);
@@ -431,6 +439,8 @@
 			files = (
 				E96CEDF02C57C75500896C0D /* ButtonLabel.swift in Sources */,
 				E90B0A182C171F8B00D65BBE /* ContentView.swift in Sources */,
+				E9BFBAC32C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */,
+				E9BFBAC02C58F9E600712627 /* ElapsedTimeView.swift in Sources */,
 				E96CEDEB2C57B08200896C0D /* Logger.swift in Sources */,
 				17DC1F612C57E2EB0055F859 /* AppDelegate.swift in Sources */,
 				E96CEDE72C57A7C500896C0D /* WorkoutManagerWatchOS.swift in Sources */,
@@ -458,6 +468,7 @@
 				E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */,
 				17B097EE2C57CC6D009C71FA /* ServerModel.swift in Sources */,
 				E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */,
+				E9BFBAC22C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */,
 				1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */,
 				1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */,
 				17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */,
@@ -470,6 +481,7 @@
 				17D399772C470104005A9180 /* PolarAPI.swift in Sources */,
 				E96CEDE92C57AD2400896C0D /* Logger.swift in Sources */,
 				E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */,
+				E9BFBABF2C58F9E600712627 /* ElapsedTimeView.swift in Sources */,
 				17D399792C470BE9005A9180 /* DeviceSearchView.swift in Sources */,
 				1787C78A2C5796700063EA53 /* AudioStreamManager.swift in Sources */,
 				17E3EBF32C4522D100F6ACB2 /* OnboardingView.swift in Sources */,

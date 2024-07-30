@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct WorkoutStats: View {
+struct WorkoutStats<TimeView: View>: View {
     var bpm: Int
     var genre: String
-    var time: String
+    var time: TimeView
     var distance: String
     
     var body: some View {
@@ -20,7 +20,9 @@ struct WorkoutStats: View {
                     StatView(label: genre, subLabel: "")
                 }
                 GridRow {
-                    StatView(label: time, subLabel: "")
+                    time
+                        .frame(maxWidth: .infinity, maxHeight: 100)
+                        .background(Color.white)
                     StatView(label: distance, subLabel: "km")
                 }
             }
@@ -52,5 +54,5 @@ struct StatView: View {
 }
 
 #Preview {
-    WorkoutStats(bpm: 142, genre: "Techno", time: "00:32:42", distance: "5.6km")
+    WorkoutStats(bpm: 142, genre: "Techno", time: ElapsedTimeView(), distance: "5.6km")
 }
