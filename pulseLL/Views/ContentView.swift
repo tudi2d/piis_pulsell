@@ -73,6 +73,13 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Preview: PreviewProvider {
+    static var previews: some View {
+        // Create an instance of WorkoutManager
+        let workoutManager = WorkoutManager.shared
+        
+        // Inject the environment object into the view
+        ContentView()
+            .environmentObject(workoutManager)
+    }
 }

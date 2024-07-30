@@ -81,6 +81,13 @@ extension WorkoutView {
     }
 }
 
-#Preview {
-    WorkoutView()
+struct WorkoutView_Preview: PreviewProvider {
+    static var previews: some View {
+        // Create an instance of WorkoutManager
+        let workoutManager = WorkoutManager.shared
+        
+        // Inject the environment object into the view
+        WorkoutView()
+            .environmentObject(workoutManager)
+    }
 }
