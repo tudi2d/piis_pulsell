@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import HealthKit
+import HealthKitUI
 
 
 struct ContentView: View {
@@ -52,10 +54,21 @@ struct ContentView: View {
                 RecapList()
             }
             .padding()
-        }
-        .onAppear{
-            triggerAuthorization.toggle()
-            workoutManager.retrieveRemoteSession()
+            .onAppear{
+                triggerAuthorization.toggle()
+                workoutManager.retrieveRemoteSession()
+            }
+            .healthDataAccessRequest(store: workoutManager.healthStore,
+                                     shareTypes: workoutManager.typesToShare,
+                                     readTypes: workoutManager.typesToRead,
+                                     trigger: triggerAuthorization, completion: { result in
+                 switch result {
+                 case .success(let success):
+                     print("\(success) for authorization")
+                 case .failure(let error):
+                     print("\(error) for authorization")
+                 }
+             })
         }
     }
 }
