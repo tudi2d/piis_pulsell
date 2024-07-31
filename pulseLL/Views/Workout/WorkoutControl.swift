@@ -63,6 +63,7 @@ struct WorkoutControl: View {
             .foregroundColor(.black)
         }
     }
+}
 
 struct WorkoutControl_Previews: PreviewProvider {
     static var previews: some View {

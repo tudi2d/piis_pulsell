@@ -21,11 +21,8 @@ struct WorkoutView: View {
                 let fromDate = workoutManager.session?.startDate ?? Date()
                 let schedule = MetricsTimelineSchedule(from: fromDate, isPaused: workoutManager.sessionState == .paused)
                 TimelineView(schedule) { context in
-                    WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: workoutManager.distance).zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
-                    WorkoutMap()
-                    WorkoutControl().zIndex(1.0).padding(.bottom)
                     VStack {
-                        WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: "6.2")
+                        WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: workoutManager.distance)
                         WorkoutMap()
                         WorkoutControl()
                             .frame(maxWidth: .infinity, maxHeight: 100)
