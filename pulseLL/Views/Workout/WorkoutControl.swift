@@ -63,16 +63,10 @@ struct WorkoutControl: View {
             .foregroundColor(.black)
         }
     }
-}
 
-
-struct WorkoutControl_Preview: PreviewProvider {
+struct WorkoutControl_Previews: PreviewProvider {
     static var previews: some View {
-        // Create an instance of WorkoutManager
-        let workoutManager = WorkoutManager.shared
-        
-        // Inject the environment object into the view
         WorkoutControl()
-            .environmentObject(workoutManager)
+            .environmentObject(WorkoutManager.shared)
     }
 }

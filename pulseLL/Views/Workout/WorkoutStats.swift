@@ -11,7 +11,7 @@ struct WorkoutStats<TimeView: View>: View {
     var bpm: Int
     var genre: String
     var time: TimeView
-    var distance: String
+    var distance: Double
     
     var body: some View {
         Grid(horizontalSpacing: 1, verticalSpacing: 1) {
@@ -20,10 +20,10 @@ struct WorkoutStats<TimeView: View>: View {
                     StatView(label: genre, subLabel: "")
                 }
                 GridRow {
-                    time
+                    TimeSupportView(time: time)
                         .frame(maxWidth: .infinity, maxHeight: 100)
                         .background(Color.white)
-                    StatView(label: distance, subLabel: "km")
+                    StatView(label: String(distance), subLabel: "km")
                 }
             }
             .background(Color(UIColor.systemGray6))
@@ -53,6 +53,17 @@ struct StatView: View {
     }
 }
 
+struct TimeSupportView <TimeView: View>: View {
+    var time: TimeView
+    var body: some View {
+        ZStack{
+            time
+        }
+        .frame(maxWidth: .infinity, maxHeight: 100)
+        .background(Color.white)
+    }
+}
+
 #Preview {
-    WorkoutStats(bpm: 142, genre: "Techno", time: ElapsedTimeView(), distance: "5.6km")
+    WorkoutStats(bpm: 142, genre: "Techno", time: ElapsedTimeView(), distance: 1.2)
 }

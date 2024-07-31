@@ -11,6 +11,8 @@ import SwiftUI
 import SwiftUI
 
 struct OnboardingDropdown: View {
+    @EnvironmentObject var workoutManager: WorkoutManager
+    
     var label: String
     @Binding var selectedOption: String
     var options: [String]

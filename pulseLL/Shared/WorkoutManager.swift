@@ -20,12 +20,15 @@ class WorkoutManager: NSObject, ObservableObject {
     @Published var heartRate: Double = 0
     @Published var elapsedTimeInterval: TimeInterval = 0
     @Published var workout: HKWorkout?
+    @Published var songGenre: String = ""
+    @Published var distance: Double = 0
     //More health data can be added later here(Must be added to Share/Read and WorkoutManager Extension)
     
     let typesToShare: Set = [HKQuantityType.workoutType()]
     let typesToRead: Set = [
         HKQuantityType(.heartRate),
         HKQuantityType.workoutType(),
+        HKQuantityType(.distanceWalkingRunning)
     ]
     
     let healthStore = HKHealthStore()
@@ -167,7 +170,9 @@ extension WorkoutManager {
         workout = nil
         session = nil
         heartRate = 0
+        distance = 0
         sessionState = .notStarted
+        songGenre = ""
     }
     
     func sendData(_ data: Data) async {
@@ -185,6 +190,11 @@ extension WorkoutManager {
         case HKQuantityType.quantityType(forIdentifier: .heartRate):
             let heartRateUnit = HKUnit.count().unitDivided(by: .minute())
             heartRate = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit) ?? 0
+        case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning),
+            HKQuantityType.quantityType(forIdentifier: .distanceCycling):
+            let meterUnit = HKUnit.meter()
+            distance = statistics.sumQuantity()?.doubleValue(for: meterUnit) ?? 0
+            
         //More health data can be added later here
             
         default:

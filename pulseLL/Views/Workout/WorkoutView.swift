@@ -21,6 +21,9 @@ struct WorkoutView: View {
                 let fromDate = workoutManager.session?.startDate ?? Date()
                 let schedule = MetricsTimelineSchedule(from: fromDate, isPaused: workoutManager.sessionState == .paused)
                 TimelineView(schedule) { context in
+                    WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: workoutManager.distance).zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                    WorkoutMap()
+                    WorkoutControl().zIndex(1.0).padding(.bottom)
                     VStack {
                         WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: "6.2")
                         WorkoutMap()
@@ -86,11 +89,9 @@ extension WorkoutView {
     }
 }
 
-struct WorkoutView_Preview: PreviewProvider {
+struct WorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        let workoutManager = WorkoutManager.shared
-        
         WorkoutView()
-            .environmentObject(workoutManager)
+            .environmentObject(WorkoutManager.shared)
     }
 }

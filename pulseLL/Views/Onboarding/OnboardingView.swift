@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @EnvironmentObject var workoutManager: WorkoutManager
     @State private var path = NavigationPath()
     @State private var selectedWorkout = "Running"
     @State private var selectedGenre = "Techno"
@@ -16,7 +17,13 @@ struct OnboardingView: View {
         NavigationStack(path: $path) {
             VStack {
                 OnboardingDropdown(label: "Workout", selectedOption: $selectedWorkout, options: ["Running", "Cycling", "Swimming"])
+                    .onChange(of: selectedGenre) { oldWorkout, newWorkout in
+                                        workoutManager.songGenre = newWorkout
+                                    }
                 OnboardingDropdown(label: "Genre", selectedOption: $selectedGenre, options: ["Techno", "Rock", "EDM", "House"])
+                    .onChange(of: selectedGenre) { oldGenre, newGenre in
+                                        workoutManager.songGenre = newGenre
+                                    }
                 
                 Spacer()
                 
