@@ -15,8 +15,9 @@ class VitalParametersViewModel: ObservableObject {
     private let networkManager = NetworkManager()
 
     func sendVitalParameters(heartRate: Int) {
+        let timestamp = Int(Date().timeIntervalSince1970)
         isLoading = true
-        networkManager.postVitalParameters(heartRate: heartRate) { [weak self] result in
+        networkManager.postVitalParameters(heartRate: heartRate, unixtimestamp: timestamp) { [weak self] result in
             DispatchQueue.main.async {
                 self?.isLoading = false
                 switch result {
