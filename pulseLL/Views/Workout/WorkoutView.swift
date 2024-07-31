@@ -21,9 +21,14 @@ struct WorkoutView: View {
                 let fromDate = workoutManager.session?.startDate ?? Date()
                 let schedule = MetricsTimelineSchedule(from: fromDate, isPaused: workoutManager.sessionState == .paused)
                 TimelineView(schedule) { context in
-                    WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: "6.2").zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
-                    WorkoutMap()
-                    WorkoutControl().zIndex(1.0).padding(.bottom)
+                    VStack {
+                        WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: "6.2")
+                        WorkoutMap()
+                        WorkoutControl()
+                            .frame(maxWidth: .infinity, maxHeight: 100)
+                            .padding(.bottom)
+                    }
+                    .zIndex(1.0)
                 }
             }
             .edgesIgnoringSafeArea(.all)
@@ -55,14 +60,14 @@ extension WorkoutView {
     @ViewBuilder
     private func headerView(context: TimelineViewDefaultContext) -> some View {
         VStack {
-                ElapsedTimeView(elapsedTime: workoutTimeInterval(context.date), showSubseconds: context.cadence == .live)
-                .font(.system(.title, design:
-                        .rounded).monospacedDigit().lowercaseSmallCaps())
-            .foregroundColor(.black)
-            .background(Color.white)
-            .font(.system(.title, design: .rounded).monospacedDigit().lowercaseSmallCaps())
+            ElapsedTimeView(elapsedTime: workoutTimeInterval(context.date), showSubseconds: context.cadence == .live)
+                .font(.system(.title, design: .rounded).monospacedDigit().lowercaseSmallCaps())
+                .foregroundColor(.black)
+                .background(Color.white)
+                .font(.system(.title, design: .rounded).monospacedDigit().lowercaseSmallCaps())
         }
     }
+    
     private func workoutTimeInterval(_ contextDate: Date) -> TimeInterval {
         var timeInterval = workoutManager.elapsedTimeInterval
         if workoutManager.sessionState == .running {
@@ -83,10 +88,8 @@ extension WorkoutView {
 
 struct WorkoutView_Preview: PreviewProvider {
     static var previews: some View {
-        // Create an instance of WorkoutManager
         let workoutManager = WorkoutManager.shared
         
-        // Inject the environment object into the view
         WorkoutView()
             .environmentObject(workoutManager)
     }

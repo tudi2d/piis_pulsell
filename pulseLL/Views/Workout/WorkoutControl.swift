@@ -15,70 +15,64 @@ struct WorkoutControl: View {
     
     var body: some View {
         NavigationStack{
-            HStack {
+            HStack(spacing: 20) {
                 Spacer()
                 Button(action: {
-                    // Like action
+                    print("Regenerate")
                 }) {
-                    Image(systemName: "heart.circle.fill")
+                    Image(systemName: "arrow.clockwise.circle.fill")
                         .resizable()
                         .frame(width: 50, height: 50)
                 }
-                Spacer(minLength: 40)
-                if audioStreamModel.isPlaying {
-                    Button(action: {
-                        audioStreamModel.stopStream()
-                    }) {
-                        Image(systemName: "pause.circle.fill")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    }
-                } else {
-                    Button(action: {
-                        // Replace with your audio stream URL
-                        if let url = URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high") {
-                            audioStreamModel.startStream(from: url)
-                        }
-                    }) {
-                        Image(systemName: "play.circle.fill")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    }
-                }
-                Spacer(minLength: 40)
-                Button {
+                Spacer()
+                Button (action:{
                     if let session = workoutManager.session {
-                        workoutManager.sessionState == .running ? session.pause() : session.resume()
+                        if(workoutManager.sessionState == .running){
+                            audioStreamModel.stopStream()
+                            session.pause()
+                        }else{
+                            session.resume()
+                            if let url = URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high") {
+                                audioStreamModel.startStream(from: url)
+                            }
+                        }
                     }
-                } label: {
-                    let title = workoutManager.sessionState == .running ? "Pause" : "Resume"
-                    let systemImage = workoutManager.sessionState == .running ? "pause" : "play"
-                    ButtonLabel(title: title, systemImage: systemImage)
+                }) {
+                    let systemName = workoutManager.sessionState == .running ? "pause.circle.fill" : "play.circle.fill"
+                    Image(systemName: systemName)
+                        .resizable()
+                        .frame(width: 50, height: 50)
                 }
-                .frame(width: 50, height: 50)
                 .disabled(!workoutManager.sessionState.isActive)
-                Spacer(minLength: 40)
-                Button {
+                Spacer()
+                Button (action: {
                     workoutManager.session?.stopActivity(with: .now )
                     returnToStartView = true
-                } label: {
-                    ButtonLabel(title: "End", systemImage: "xmark")
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                        .resizable()
+                        .frame(width: 50, height: 50)
                 }
                 .tint(.red)
-                .frame(width: 50, height: 50)
                 .disabled(!workoutManager.sessionState.isActive)
                 .navigationDestination(isPresented: $returnToStartView) {
                     ContentView()
                 }
-                    
-                    Spacer()
-                }
-                .buttonStyle(.bordered)
-                .padding()
-                .foregroundColor(.black)
+                Spacer()
             }
+            .foregroundColor(.black)
         }
     }
-#Preview {
-    WorkoutControl()
+}
+
+
+struct WorkoutControl_Preview: PreviewProvider {
+    static var previews: some View {
+        // Create an instance of WorkoutManager
+        let workoutManager = WorkoutManager.shared
+        
+        // Inject the environment object into the view
+        WorkoutControl()
+            .environmentObject(workoutManager)
+    }
 }
