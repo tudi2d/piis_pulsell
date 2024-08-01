@@ -8,6 +8,8 @@
 import SwiftUI
 import os
 
+// http://10.181.216.240:5000
+
 struct WorkoutControl: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     @StateObject private var audioStreamModel = AudioStreamManager()
@@ -43,7 +45,7 @@ struct WorkoutControl: View {
                             isPaused = true
                         }
                     } else if (isPaused){
-                        if let url = URL(string: "") { //https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high
+                        if let url = URL(string: "http://10.181.216.240:9610/playlist.m3u8") {
                             Logger.shared.log("Starting audio stream")
                             audioStreamModel.startStream(from: url)
                         }

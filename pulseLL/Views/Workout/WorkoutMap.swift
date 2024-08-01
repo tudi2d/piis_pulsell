@@ -42,7 +42,7 @@ struct WorkoutMap: View {
             
                 if let route {
                     MapPolyline(route.polyline)
-                        .stroke(.blue, lineWidth: 8)
+                        .stroke(.gray, lineWidth: 8)
                 }
             }
         .onAppear {

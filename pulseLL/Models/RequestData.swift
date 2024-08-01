@@ -13,4 +13,5 @@ struct VitalParameters: Codable {
     let song_genre: String //e.g. "Rock"
     let user_id: String //UUID
     let workout_id: Int //5-digit number
+    let activity_type: String // running, cycling, hiking
 }

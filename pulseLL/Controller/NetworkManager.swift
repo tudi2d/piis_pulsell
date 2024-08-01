@@ -8,9 +8,10 @@
 import Foundation
 
 class NetworkManager {
-    private let baseURL = "http://11.181.216.240:5000"
+    private let baseURL = "http://10.181.216.240:5000"
 
-    func postVitalParameters(heartRate: Int, unixTimestamp: Int, songGenre: String, userID: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func postVitalParameters(heartRate: Int, unixTimestamp: Int, songGenre: String, userID: String, activityType: String, completion: @escaping (Result<String, Error>) -> Void) {
+        print("LOG")
         guard let url = URL(string: "\(baseURL)/vital_parameters") else {
             completion(.failure(NSError(domain: "InvalidURL", code: -1, userInfo: nil)))
             return
@@ -19,8 +20,7 @@ class NetworkManager {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let body = VitalParameters(heart_rate: heartRate, unix_timestamp: unixTimestamp, song_genre: songGenre, user_id: userID, workout_id: 12345)
-        print(body)
+        let body = VitalParameters(heart_rate: heartRate, unix_timestamp: unixTimestamp, song_genre: songGenre, user_id: userID, workout_id: 12345,activity_type: activityType)
         let encoder = JSONEncoder()
 
         do {

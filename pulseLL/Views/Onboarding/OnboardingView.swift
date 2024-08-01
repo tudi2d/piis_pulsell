@@ -48,7 +48,7 @@ struct OnboardingView: View {
                     .padding(.bottom, 50)
                 }
                 .padding(.top, 50)
-                .background(.white.opacity(0.8))
+                .background(.white.opacity(0.7))
                 
                 OnboardingMap().zIndex(-1)
             }

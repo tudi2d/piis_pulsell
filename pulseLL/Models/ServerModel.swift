@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 class VitalParametersViewModel: ObservableObject {
     @Published var responseMessage: String?
@@ -16,11 +17,22 @@ class VitalParametersViewModel: ObservableObject {
     let workoutManager = WorkoutManager.shared
     
     
-    func sendVitalParameters(heartRate: Int, songGenre: String) {
+    func sendVitalParameters(heartRate: Int, songGenre: String, workoutType: HKWorkoutActivityType) {
         let timestamp = Int(Date().timeIntervalSince1970)
         let userID = UserIDManager.shared.getUserID()
+        
+        var activityType: String {
+            switch workoutType{
+            case HKWorkoutActivityType.running: return "running"
+            case HKWorkoutActivityType.swimming: return "swimming"
+            case HKWorkoutActivityType.hiking: return "hiking"
+            default:
+                return "lol broken"
+            }
+        }
+        
         isLoading = true
-        networkManager.postVitalParameters(heartRate: heartRate, unixTimestamp: timestamp, songGenre: songGenre, userID: userID) { [weak self] result in
+        networkManager.postVitalParameters(heartRate: heartRate, unixTimestamp: timestamp, songGenre: songGenre, userID: userID, activityType: activityType) { [weak self] result in
             DispatchQueue.main.async {
                 self?.isLoading = false
                 switch result {
