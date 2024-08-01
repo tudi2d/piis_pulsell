@@ -34,6 +34,7 @@ extension WorkoutManager {
         let startDate = Date()
         session?.startActivity(with: startDate)
         try await builder?.beginCollection(at: startDate)
+        Logger.shared.log("Starting Workout on Watch")
     }
     
     func handleReceivedData(_ data: Data) throws {

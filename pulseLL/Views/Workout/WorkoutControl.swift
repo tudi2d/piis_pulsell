@@ -11,6 +11,7 @@ import os
 struct WorkoutControl: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     @StateObject private var audioStreamModel = AudioStreamManager()
+    @State private var isPaused = false
     @State private var returnToStartView = false
     @State private var degreesTilted = 0.0
     
@@ -33,25 +34,27 @@ struct WorkoutControl: View {
                 Spacer()
                 Button (action:{
                     let session = workoutManager.session
-                    if (audioStreamModel.isPlaying) {
+                    if (!isPaused) {
                         Logger.shared.log("Stopping audio stream")
                         audioStreamModel.stopStream()
                         if(workoutManager.sessionState == .running){
                             Logger.shared.log("Pausing workout")
                             session?.pause()
+                            isPaused = true
                         }
-                    } else if (!audioStreamModel.isPlaying) {
-                        if let url = URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high") {
+                    } else if (isPaused){
+                        if let url = URL(string: "") { //https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high
                             Logger.shared.log("Starting audio stream")
                             audioStreamModel.startStream(from: url)
                         }
-                        if(workoutManager.sessionState == .running){
+                        if(workoutManager.sessionState == .paused){
                             Logger.shared.log("Resuming workout")
                             session?.resume()
+                            isPaused = false
                         }
                     }
                 }) {
-                    let systemName = audioStreamModel.isPlaying == true ? "pause.circle.fill" : "play.circle.fill"
+                    let systemName = isPaused == false ? "pause.circle.fill" : "play.circle.fill"
                     Image(systemName: systemName)
                         .resizable()
                         .frame(width: 50, height: 50)
@@ -77,7 +80,7 @@ struct WorkoutControl: View {
             .foregroundColor(.black)
         }
         .onAppear(){
-            audioStreamModel.startStream(from: URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high")!)
+            //audioStreamModel.startStream(from: URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high")!)
         }
     }
 }

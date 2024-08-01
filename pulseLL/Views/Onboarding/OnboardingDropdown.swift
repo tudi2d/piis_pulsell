@@ -57,7 +57,7 @@ struct OnboardingDropdownPreviewWrapper: View {
     @State private var selectedWorkout = "Running"
     
     var body: some View {
-        OnboardingDropdown(label: "Workout", selectedOption: $selectedWorkout, options: ["Running", "Cycling", "Swimming"])
+        OnboardingDropdown(label: "Workout", selectedOption: $selectedWorkout, options: ["Running", "Cycling", "Hiking"])
     }
 }
 

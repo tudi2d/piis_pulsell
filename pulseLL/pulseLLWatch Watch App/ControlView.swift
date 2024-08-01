@@ -11,13 +11,26 @@ import HealthKit
 
 struct ControlView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
-    
+    @State private var workoutIcon = "figure.run"
     var body: some View {
         VStack {
+            
             Button {
                 startWorkout()
+                switch workoutManager.workoutType {
+                case .running:
+                    workoutIcon = "figure.run"
+                case .cycling:
+                    workoutIcon = "figure.outdoor.cycle"
+                case .hiking:
+                    workoutIcon =  "figure.hiking"
+                default:
+                    workoutIcon = "figure.run"
+                }
             } label: {
-                ButtonLabel(title: "Start", systemImage: "figure.run")
+                let systemImage = workoutManager.workoutType == .running ? "figure.run" : "figure.outdoor.cycle"
+                ButtonLabel(title: "Start", systemImage: systemImage)
+                            
             }
             .disabled(workoutManager.sessionState.isActive)
             .tint(.green)

@@ -8,7 +8,7 @@
 import Foundation
 
 class NetworkManager {
-    private let baseURL = "http://10.181.216.240:5000"
+    private let baseURL = "http://11.181.216.240:5000"
 
     func postVitalParameters(heartRate: Int, unixTimestamp: Int, songGenre: String, userID: String, completion: @escaping (Result<String, Error>) -> Void) {
         guard let url = URL(string: "\(baseURL)/vital_parameters") else {

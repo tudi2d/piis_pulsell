@@ -16,6 +16,7 @@ extension WorkoutManager {
         configuration.activityType = workoutType
         configuration.locationType = .outdoor
         try await healthStore.startWatchApp(toHandle: configuration)
+        Logger.shared.log("Launching AppleWatch Extension")
     }
     
     func retrieveRemoteSession() {

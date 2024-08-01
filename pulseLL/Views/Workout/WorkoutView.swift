@@ -22,8 +22,8 @@ struct WorkoutView: View {
                 let schedule = MetricsTimelineSchedule(from: fromDate, isPaused: workoutManager.sessionState == .paused)
                 TimelineView(schedule) { context in
                     VStack {
-                        Spacer()
-                        WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: workoutManager.distance)
+                        Spacer(minLength: 25)
+                        WorkoutStats(bpm: Int(workoutManager.heartRate), genre: workoutManager.songGenre, time: headerView(context: context), distance: workoutManager.distance)
                         WorkoutMap()
                         WorkoutControl()
                             .frame(maxWidth: .infinity, maxHeight: 100)
@@ -41,7 +41,7 @@ struct WorkoutView: View {
                 didStartWorkout = true
             }
             .onChange(of: workoutManager.heartRate, {
-                serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate))
+                serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate), songGenre: workoutManager.songGenre)
             })
         }
     }
@@ -89,6 +89,7 @@ extension WorkoutView {
 }
 
 struct WorkoutView_Previews: PreviewProvider {
+    @StateObject private var audioStreamModel = AudioStreamManager()
     static var previews: some View {
         WorkoutView()
             .environmentObject(WorkoutManager.shared)

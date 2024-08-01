@@ -20,7 +20,8 @@ class WorkoutManager: NSObject, ObservableObject {
     @Published var heartRate: Double = 0
     @Published var elapsedTimeInterval: TimeInterval = 0
     @Published var workout: HKWorkout?
-    @Published var songGenre: String = ""
+    @Published var workoutType: HKWorkoutActivityType = .running
+    @Published var songGenre: String = "Genre"
     @Published var distance: Double = 0
     //More health data can be added later here(Must be added to Share/Read and WorkoutManager Extension)
     
@@ -84,7 +85,7 @@ class WorkoutManager: NSObject, ObservableObject {
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = .running
         configuration.locationType = .outdoor
-        print("Workout started")
+        Logger.shared.log("Debugging Workout started")
         
         let startDate = Date()
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: nil, options: .strictStartDate)
@@ -173,7 +174,7 @@ extension WorkoutManager {
         heartRate = 0
         distance = 0
         sessionState = .notStarted
-        songGenre = ""
+        songGenre = "Genre"
     }
     
     func sendData(_ data: Data) async {
