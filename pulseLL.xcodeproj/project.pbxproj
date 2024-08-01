@@ -49,6 +49,8 @@
 		E96CEDED2C57C6D000896C0D /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDEC2C57C6D000896C0D /* ControlView.swift */; };
 		E96CEDEF2C57C72F00896C0D /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDEE2C57C72F00896C0D /* ButtonLabel.swift */; };
 		E96CEDF02C57C75500896C0D /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDEE2C57C72F00896C0D /* ButtonLabel.swift */; };
+		E9805FCD2C5BCEFE006C7F19 /* workoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9805FCC2C5BCEFE006C7F19 /* workoutCardView.swift */; };
+		E9805FCF2C5BD505006C7F19 /* soundwave.png in Resources */ = {isa = PBXBuildFile; fileRef = E9805FCE2C5BD504006C7F19 /* soundwave.png */; };
 		E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAC2C16FA070035C836 /* pulseLLApp.swift */; };
 		E9953FAF2C16FA070035C836 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAE2C16FA070035C836 /* HomeView.swift */; };
 		E9953FB12C16FA0A0035C836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB02C16FA0A0035C836 /* Assets.xcassets */; };
@@ -128,6 +130,8 @@
 		E96CEDE82C57AD2400896C0D /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E96CEDEC2C57C6D000896C0D /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		E96CEDEE2C57C72F00896C0D /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
+		E9805FCC2C5BCEFE006C7F19 /* workoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutCardView.swift; sourceTree = "<group>"; };
+		E9805FCE2C5BD504006C7F19 /* soundwave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soundwave.png; sourceTree = "<group>"; };
 		E9953FA92C16FA070035C836 /* pulseLL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pulseLL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9953FAC2C16FA070035C836 /* pulseLLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pulseLLApp.swift; sourceTree = "<group>"; };
 		E9953FAE2C16FA070035C836 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				17E3EBF02C45222900F6ACB2 /* Workout */,
 				17E3EBF12C45223000F6ACB2 /* Onboarding */,
 				E9953FAE2C16FA070035C836 /* HomeView.swift */,
+				E9805FCB2C5BCED3006C7F19 /* WorkoutCards */,
 				17D399782C470BE9005A9180 /* DeviceSearchView.swift */,
 			);
 			name = Views;
@@ -240,6 +245,7 @@
 		17EA44822C41465D000F3AC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9805FCE2C5BD504006C7F19 /* soundwave.png */,
 				17EA44892C414B1A000F3AC4 /* recaps.json */,
 			);
 			path = Resources;
@@ -292,6 +298,14 @@
 				17626A422C413689006922C1 /* Views */,
 			);
 			path = pulseLLiOSApp;
+			sourceTree = "<group>";
+		};
+		E9805FCB2C5BCED3006C7F19 /* WorkoutCards */ = {
+			isa = PBXGroup;
+			children = (
+				E9805FCC2C5BCEFE006C7F19 /* workoutCardView.swift */,
+			);
+			path = WorkoutCards;
 			sourceTree = "<group>";
 		};
 		E9953FA02C16FA070035C836 = {
@@ -437,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9805FCF2C5BD505006C7F19 /* soundwave.png in Resources */,
 				E9953FB42C16FA0A0035C836 /* Preview Assets.xcassets in Resources */,
 				E9953FB12C16FA0A0035C836 /* Assets.xcassets in Resources */,
 				17EA448A2C414B1A000F3AC4 /* recaps.json in Resources */,
@@ -484,6 +499,7 @@
 				172CAC7C2C58FF6E00B78C1F /* AudioStreamDecoder.swift in Sources */,
 				17B097EE2C57CC6D009C71FA /* ServerModel.swift in Sources */,
 				172CAC7A2C58FD4F00B78C1F /* WebSocketManager.swift in Sources */,
+				E9805FCD2C5BCEFE006C7F19 /* workoutCardView.swift in Sources */,
 				E9BFBAC22C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */,
 				1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */,
 				1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */,
