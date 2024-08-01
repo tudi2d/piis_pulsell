@@ -38,7 +38,7 @@ struct WorkoutControl: View {
                     let session = workoutManager.session
                     if (!isPaused) {
                         Logger.shared.log("Stopping audio stream")
-                        audioStreamModel.stopStream()
+                        audioStreamModel.muteStream()
                         if(workoutManager.sessionState == .running){
                             Logger.shared.log("Pausing workout")
                             session?.pause()
@@ -47,7 +47,7 @@ struct WorkoutControl: View {
                     } else if (isPaused){
                         if let url = URL(string: "http://10.181.216.240:9610/playlist.m3u8") {
                             Logger.shared.log("Starting audio stream")
-                            audioStreamModel.startStream(from: url)
+                            audioStreamModel.unmuteStream()
                         }
                         if(workoutManager.sessionState == .paused){
                             Logger.shared.log("Resuming workout")
@@ -82,7 +82,7 @@ struct WorkoutControl: View {
             .foregroundColor(.black)
         }
         .onAppear(){
-            //audioStreamModel.startStream(from: URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high")!)
+            audioStreamModel.startStream(from: URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high")!)
         }
     }
 }
