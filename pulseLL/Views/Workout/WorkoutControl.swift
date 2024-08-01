@@ -13,6 +13,7 @@ import os
 struct WorkoutControl: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     @StateObject private var audioStreamModel = AudioStreamManager()
+    private let networkManager = NetworkManager()
     @State private var isPaused = false
     @State private var returnToStartView = false
     @State private var degreesTilted = 0.0
@@ -42,8 +43,8 @@ struct WorkoutControl: View {
                         if(workoutManager.sessionState == .running){
                             Logger.shared.log("Pausing workout")
                             session?.pause()
-                            isPaused = true
                         }
+                        isPaused = true
                     } else if (isPaused){
                         if let url = URL(string: "http://10.181.216.240:9610/playlist.m3u8") {
                             Logger.shared.log("Starting audio stream")
@@ -52,8 +53,8 @@ struct WorkoutControl: View {
                         if(workoutManager.sessionState == .paused){
                             Logger.shared.log("Resuming workout")
                             session?.resume()
-                            isPaused = false
                         }
+                        isPaused = false
                     }
                 }) {
                     let systemName = isPaused == false ? "pause.circle.fill" : "play.circle.fill"
@@ -64,7 +65,7 @@ struct WorkoutControl: View {
                 //.disabled(!workoutManager.sessionState.isActive)
                 Spacer()
                 Button (action: {
-                    print("Test?")
+                    networkManager.stopWorkout();
                     workoutManager.session?.stopActivity(with: .now )
                     returnToStartView = true
                 }) {
@@ -82,7 +83,7 @@ struct WorkoutControl: View {
             .foregroundColor(.black)
         }
         .onAppear(){
-            audioStreamModel.startStream(from: URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high")!)
+            audioStreamModel.startStream(from: URL(string: "http://10.181.216.240:9610/playlist.m3u8")!)
         }
     }
 }

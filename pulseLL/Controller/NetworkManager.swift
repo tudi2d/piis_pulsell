@@ -45,4 +45,28 @@ class NetworkManager {
 
         task.resume()
     }
+    
+    func stopWorkout() -> Void {
+        print("LOG")
+        guard let url = URL(string: "\(baseURL)/stop_workout") else {
+            print("ERROR")
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let data = data, let responseString = String(data: data, encoding: .utf8) else {
+                print(NSError(domain: "InvalidData", code: -1, userInfo: nil))
+                return
+            }
+        }
+        task.resume()
+    }
 }
