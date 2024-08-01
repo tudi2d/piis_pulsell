@@ -73,7 +73,7 @@ struct WorkoutControl: View {
                 .tint(.red)
                 //.disabled(!workoutManager.sessionState.isActive)
                 .navigationDestination(isPresented: $returnToStartView) {
-                    ContentView()
+                    HomeView()
                 }
                 Spacer()
             }

@@ -10,7 +10,7 @@ import HealthKit
 import HealthKitUI
 
 
-struct ContentView: View {
+struct HomeView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     @State private var didStartWorkout = false
     @State private var triggerAuthorization = false
@@ -79,7 +79,7 @@ struct ContentView_Preview: PreviewProvider {
         let workoutManager = WorkoutManager.shared
         
         // Inject the environment object into the view
-        ContentView()
+        HomeView()
             .environmentObject(workoutManager)
     }
 }

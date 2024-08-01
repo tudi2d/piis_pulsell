@@ -40,7 +40,6 @@
 		E90B0A262C171FA900D65BBE /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A252C171FA900D65BBE /* WatchConnector.swift */; };
 		E90B0A282C171FCB00D65BBE /* iPhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A272C171FCB00D65BBE /* iPhoneConnector.swift */; };
 		E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A312C172EF100D65BBE /* pulseLLTabView.swift */; };
-		E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A332C172EFD00D65BBE /* HomeView.swift */; };
 		E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A352C172F0B00D65BBE /* HeartRateView.swift */; };
 		E96CEDE42C57A07100896C0D /* WorkoutManageriOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDE32C57A07100896C0D /* WorkoutManageriOS.swift */; };
 		E96CEDE72C57A7C500896C0D /* WorkoutManagerWatchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDE52C57A7C500896C0D /* WorkoutManagerWatchOS.swift */; };
@@ -51,7 +50,7 @@
 		E96CEDEF2C57C72F00896C0D /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDEE2C57C72F00896C0D /* ButtonLabel.swift */; };
 		E96CEDF02C57C75500896C0D /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDEE2C57C72F00896C0D /* ButtonLabel.swift */; };
 		E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAC2C16FA070035C836 /* pulseLLApp.swift */; };
-		E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAE2C16FA070035C836 /* ContentView.swift */; };
+		E9953FAF2C16FA070035C836 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9953FAE2C16FA070035C836 /* HomeView.swift */; };
 		E9953FB12C16FA0A0035C836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB02C16FA0A0035C836 /* Assets.xcassets */; };
 		E9953FB42C16FA0A0035C836 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */; };
 		E9BCCE792C5A477000C96FD9 /* UserIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BCCE782C5A477000C96FD9 /* UserIDManager.swift */; };
@@ -120,7 +119,6 @@
 		E90B0A252C171FA900D65BBE /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		E90B0A272C171FCB00D65BBE /* iPhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneConnector.swift; sourceTree = "<group>"; };
 		E90B0A312C172EF100D65BBE /* pulseLLTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pulseLLTabView.swift; sourceTree = "<group>"; };
-		E90B0A332C172EFD00D65BBE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E90B0A352C172F0B00D65BBE /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
 		E90B0A372C1731C300D65BBE /* pulseLL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pulseLL.entitlements; sourceTree = "<group>"; };
 		E90B0A382C1731D900D65BBE /* pulseLLWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pulseLLWatch Watch App.entitlements"; sourceTree = "<group>"; };
@@ -132,7 +130,7 @@
 		E96CEDEE2C57C72F00896C0D /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		E9953FA92C16FA070035C836 /* pulseLL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pulseLL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9953FAC2C16FA070035C836 /* pulseLLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pulseLLApp.swift; sourceTree = "<group>"; };
-		E9953FAE2C16FA070035C836 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9953FAE2C16FA070035C836 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E9953FB02C16FA0A0035C836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9BCCE782C5A477000C96FD9 /* UserIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManager.swift; sourceTree = "<group>"; };
@@ -178,7 +176,7 @@
 				1709ED332C4598E700A83FF2 /* Main */,
 				17E3EBF02C45222900F6ACB2 /* Workout */,
 				17E3EBF12C45223000F6ACB2 /* Onboarding */,
-				E9953FAE2C16FA070035C836 /* ContentView.swift */,
+				E9953FAE2C16FA070035C836 /* HomeView.swift */,
 				17D399782C470BE9005A9180 /* DeviceSearchView.swift */,
 			);
 			name = Views;
@@ -338,7 +336,6 @@
 			children = (
 				E9953FB32C16FA0A0035C836 /* Preview Assets.xcassets */,
 				E90B0A312C172EF100D65BBE /* pulseLLTabView.swift */,
-				E90B0A332C172EFD00D65BBE /* HomeView.swift */,
 				E90B0A352C172F0B00D65BBE /* HeartRateView.swift */,
 			);
 			path = "Preview Content";
@@ -473,7 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B097F02C57CCB1009C71FA /* NetworkManager.swift in Sources */,
-				E9953FAF2C16FA070035C836 /* ContentView.swift in Sources */,
+				E9953FAF2C16FA070035C836 /* HomeView.swift in Sources */,
 				E96CEDEF2C57C72F00896C0D /* ButtonLabel.swift in Sources */,
 				17EA44862C4146E5000F3AC4 /* Workout.swift in Sources */,
 				17E3EBF72C4528A600F6ACB2 /* WorkoutView.swift in Sources */,
@@ -487,7 +484,6 @@
 				172CAC7C2C58FF6E00B78C1F /* AudioStreamDecoder.swift in Sources */,
 				17B097EE2C57CC6D009C71FA /* ServerModel.swift in Sources */,
 				172CAC7A2C58FD4F00B78C1F /* WebSocketManager.swift in Sources */,
-				E90B0A342C172EFD00D65BBE /* HomeView.swift in Sources */,
 				E9BFBAC22C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */,
 				1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */,
 				1709ED352C45A02100A83FF2 /* HealthKitUtils.swift in Sources */,

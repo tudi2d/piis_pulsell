@@ -14,10 +14,10 @@ struct pulseLLApp: App {
     var body: some Scene {
         WindowGroup {
             if UIDevice.current.userInterfaceIdiom == .phone {
-                ContentView()
+                HomeView()
                     .environmentObject(workoutManager)
             } else {
-                ContentView()
+                HomeView()
             }
         }
     }
