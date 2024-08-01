@@ -22,6 +22,7 @@ struct WorkoutView: View {
                 let schedule = MetricsTimelineSchedule(from: fromDate, isPaused: workoutManager.sessionState == .paused)
                 TimelineView(schedule) { context in
                     VStack {
+                        Spacer()
                         WorkoutStats(bpm: Int(workoutManager.heartRate), genre: "Techno", time: headerView(context: context), distance: workoutManager.distance)
                         WorkoutMap()
                         WorkoutControl()
@@ -34,10 +35,8 @@ struct WorkoutView: View {
             .edgesIgnoringSafeArea(.all)
             .navigationBarHidden(true)
             .onAppear{
-                //workoutManager.startWorkout()
                 if !workoutManager.sessionState.isActive {
                     startRunningOnWatch()
-                
                 }
                 didStartWorkout = true
             }

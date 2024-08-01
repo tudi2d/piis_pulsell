@@ -13,6 +13,7 @@
 		172CAC7C2C58FF6E00B78C1F /* AudioStreamDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CAC7B2C58FF6E00B78C1F /* AudioStreamDecoder.swift */; };
 		1787C78A2C5796700063EA53 /* AudioStreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787C7892C5796700063EA53 /* AudioStreamManager.swift */; };
 		1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796163B2C4671D400A5B474 /* LocationManager.swift */; };
+		17AB045E2C5BC8A0002F067B /* OnboardingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AB045D2C5BC8A0002F067B /* OnboardingMap.swift */; };
 		17B097EE2C57CC6D009C71FA /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B097ED2C57CC6D009C71FA /* ServerModel.swift */; };
 		17B097F02C57CCB1009C71FA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B097EF2C57CCB1009C71FA /* NetworkManager.swift */; };
 		17B097F22C57CCEE009C71FA /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B097F12C57CCEE009C71FA /* RequestData.swift */; };
@@ -93,6 +94,7 @@
 		172CAC7B2C58FF6E00B78C1F /* AudioStreamDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamDecoder.swift; sourceTree = "<group>"; };
 		1787C7892C5796700063EA53 /* AudioStreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamManager.swift; sourceTree = "<group>"; };
 		1796163B2C4671D400A5B474 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		17AB045D2C5BC8A0002F067B /* OnboardingMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingMap.swift; sourceTree = "<group>"; };
 		17B097ED2C57CC6D009C71FA /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		17B097EF2C57CCB1009C71FA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		17B097F12C57CCEE009C71FA /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */,
 				17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */,
+				17AB045D2C5BC8A0002F067B /* OnboardingMap.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				17EA44862C4146E5000F3AC4 /* Workout.swift in Sources */,
 				17E3EBF72C4528A600F6ACB2 /* WorkoutView.swift in Sources */,
 				17EA44812C4144F9000F3AC4 /* RecapList.swift in Sources */,
+				17AB045E2C5BC8A0002F067B /* OnboardingMap.swift in Sources */,
 				17E3EBFD2C4530CF00F6ACB2 /* WorkoutMap.swift in Sources */,
 				E90B0A262C171FA900D65BBE /* WatchConnector.swift in Sources */,
 				17E3EBFB2C45297000F6ACB2 /* WorkoutStats.swift in Sources */,
@@ -527,7 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/pulseLLWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "pulseLLWatch-Watch-App-Info.plist";
@@ -563,7 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/pulseLLWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "pulseLLWatch-Watch-App-Info.plist";
@@ -719,7 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;
@@ -757,7 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;

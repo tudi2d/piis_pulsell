@@ -38,10 +38,11 @@ struct StatView: View {
     var subLabel: String
     
     var body: some View {
-        VStack {
+        HStack(alignment: .firstTextBaseline){
             Text(label)
                 .font(.title)
                 .fontWeight(.bold)
+            
             if !subLabel.isEmpty {
                 Text(subLabel)
                     .font(.caption)
