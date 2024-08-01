@@ -59,6 +59,7 @@
 		E9BFBAC02C58F9E600712627 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */; };
 		E9BFBAC22C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */; };
 		E9BFBAC32C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */; };
+		E9FB349A2C5A7D7C00ECBCA5 /* connectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB34992C5A7D7C00ECBCA5 /* connectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		E9BCCE782C5A477000C96FD9 /* UserIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManager.swift; sourceTree = "<group>"; };
 		E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
 		E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsTimelineSchedule.swift; sourceTree = "<group>"; };
+		E9FB34992C5A7D7C00ECBCA5 /* connectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectionManager.swift; sourceTree = "<group>"; };
 		E9FDAA002C57D71B00249100 /* pulseLLWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pulseLLWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		E9FDAA012C57D73300249100 /* pulseLL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pulseLL.entitlements; sourceTree = "<group>"; };
 		E9FDAA022C58E05B00249100 /* pulseLLWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "pulseLLWatch-Watch-App-Info.plist"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				E96CEDE32C57A07100896C0D /* WorkoutManageriOS.swift */,
 				E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */,
 				E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */,
+				E9FB34992C5A7D7C00ECBCA5 /* connectionManager.swift */,
 				E96CEDE82C57AD2400896C0D /* Logger.swift */,
 				E9BCCE782C5A477000C96FD9 /* UserIDManager.swift */,
 				E96CEDEE2C57C72F00896C0D /* ButtonLabel.swift */,
@@ -487,6 +490,7 @@
 				17EA447D2C41436B000F3AC4 /* RecapItem.swift in Sources */,
 				17E3EBF52C45254F00F6ACB2 /* OnboardingDropdown.swift in Sources */,
 				17B097F22C57CCEE009C71FA /* RequestData.swift in Sources */,
+				E9FB349A2C5A7D7C00ECBCA5 /* connectionManager.swift in Sources */,
 				17E3EBFF2C45310700F6ACB2 /* WorkoutControl.swift in Sources */,
 				E96CEDE42C57A07100896C0D /* WorkoutManageriOS.swift in Sources */,
 				17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */,

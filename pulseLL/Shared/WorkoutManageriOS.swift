@@ -10,6 +10,7 @@ import os
 import HealthKit
 
 extension WorkoutManager {
+
     func startWatchWorkout(workoutType: HKWorkoutActivityType) async throws {
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = workoutType

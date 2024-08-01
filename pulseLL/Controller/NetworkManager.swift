@@ -19,7 +19,7 @@ class NetworkManager {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let body = VitalParameters(heart_rate: heartRate, unix_timestamp: unixTimestamp, song_genre: songGenre, user_id: userID)
+        let body = VitalParameters(heart_rate: heartRate, unix_timestamp: unixTimestamp, song_genre: songGenre, user_id: userID, workout_id: 12345)
         print(body)
         let encoder = JSONEncoder()
 

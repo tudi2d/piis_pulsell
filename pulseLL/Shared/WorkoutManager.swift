@@ -79,7 +79,8 @@ class WorkoutManager: NSObject, ObservableObject {
         #endif
     }
 
-    func startWorkout() {
+    func startLocalWorkout() {
+        Logger.shared.log("Trying to start local workout")
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = .running
         configuration.locationType = .outdoor

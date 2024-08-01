@@ -37,6 +37,7 @@ struct WorkoutView: View {
                 //workoutManager.startWorkout()
                 if !workoutManager.sessionState.isActive {
                     startRunningOnWatch()
+                
                 }
                 didStartWorkout = true
             }
@@ -51,6 +52,8 @@ struct WorkoutView: View {
                 try await workoutManager.startWatchWorkout(workoutType: .running)
             } catch {
                 Logger.shared.log("Failed to start running on the paired watch.")
+                workoutManager.startLocalWorkout()
+                
             }
         }
     }

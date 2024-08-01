@@ -18,7 +18,7 @@ class VitalParametersViewModel: ObservableObject {
 
     func sendVitalParameters(heartRate: Int) {
         let timestamp = Int(Date().timeIntervalSince1970)
-        let songGenre = workoutManager.songGenre
+        let songGenre = "techno"//workoutManager.songGenre
         let userID = UserIDManager.shared.getUserID()
         isLoading = true
         networkManager.postVitalParameters(heartRate: heartRate, unixTimestamp: timestamp, songGenre: songGenre, userID: userID) { [weak self] result in

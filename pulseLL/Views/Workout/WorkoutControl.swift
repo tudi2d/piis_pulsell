@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import os
 
 struct WorkoutControl: View {
     @EnvironmentObject var workoutManager: WorkoutManager
@@ -31,24 +32,31 @@ struct WorkoutControl: View {
                 }
                 Spacer()
                 Button (action:{
-                    if let session = workoutManager.session {
+                    let session = workoutManager.session
+                    if (audioStreamModel.isPlaying) {
+                        Logger.shared.log("Stopping audio stream")
+                        audioStreamModel.stopStream()
                         if(workoutManager.sessionState == .running){
-                            audioStreamModel.stopStream()
-                            session.pause()
-                        }else{
-                            session.resume()
-                            if let url = URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high") {
-                                audioStreamModel.startStream(from: url)
-                            }
+                            Logger.shared.log("Pausing workout")
+                            session?.pause()
+                        }
+                    } else if (!audioStreamModel.isPlaying) {
+                        if let url = URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high") {
+                            Logger.shared.log("Starting audio stream")
+                            audioStreamModel.startStream(from: url)
+                        }
+                        if(workoutManager.sessionState == .running){
+                            Logger.shared.log("Resuming workout")
+                            session?.resume()
                         }
                     }
                 }) {
-                    let systemName = workoutManager.sessionState == .running ? "pause.circle.fill" : "play.circle.fill"
+                    let systemName = audioStreamModel.isPlaying == true ? "pause.circle.fill" : "play.circle.fill"
                     Image(systemName: systemName)
                         .resizable()
                         .frame(width: 50, height: 50)
                 }
-                .disabled(!workoutManager.sessionState.isActive)
+                //.disabled(!workoutManager.sessionState.isActive)
                 Spacer()
                 Button (action: {
                     print("Test?")
@@ -60,13 +68,16 @@ struct WorkoutControl: View {
                         .frame(width: 50, height: 50)
                 }
                 .tint(.red)
-                .disabled(!workoutManager.sessionState.isActive)
+                //.disabled(!workoutManager.sessionState.isActive)
                 .navigationDestination(isPresented: $returnToStartView) {
                     ContentView()
                 }
                 Spacer()
             }
             .foregroundColor(.black)
+        }
+        .onAppear(){
+            audioStreamModel.startStream(from: URL(string: "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high")!)
         }
     }
 }

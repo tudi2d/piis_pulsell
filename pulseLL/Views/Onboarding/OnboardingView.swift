@@ -28,7 +28,7 @@ struct OnboardingView: View {
                 Spacer()
                 
                 NavigationLink{WorkoutView()}label: {
-                    Image(systemName: "stop.circle.fill")
+                    Image(systemName: "play.circle.fill")
                         .resizable()
                         .frame(width: 70, height: 70)
                         .padding(.trailing)
