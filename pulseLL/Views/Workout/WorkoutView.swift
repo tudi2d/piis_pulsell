@@ -40,7 +40,6 @@ struct WorkoutView: View {
                     startRunningOnWatch()
                 }
                 didStartWorkout = true
-                serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate), songGenre: workoutManager.songGenre, workoutType: workoutManager.workoutType)
             }
             .onChange(of: workoutManager.heartRate, {
                 serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate), songGenre: workoutManager.songGenre, workoutType: workoutManager.workoutType)

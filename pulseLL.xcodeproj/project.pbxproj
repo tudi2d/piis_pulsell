@@ -43,6 +43,7 @@
 		E90B0A282C171FCB00D65BBE /* iPhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A272C171FCB00D65BBE /* iPhoneConnector.swift */; };
 		E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A312C172EF100D65BBE /* pulseLLTabView.swift */; };
 		E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B0A352C172F0B00D65BBE /* HeartRateView.swift */; };
+		E92C5F932C5CEE8E00820B47 /* testCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92C5F922C5CEE8E00820B47 /* testCard.swift */; };
 		E96CEDE42C57A07100896C0D /* WorkoutManageriOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDE32C57A07100896C0D /* WorkoutManageriOS.swift */; };
 		E96CEDE72C57A7C500896C0D /* WorkoutManagerWatchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDE52C57A7C500896C0D /* WorkoutManagerWatchOS.swift */; };
 		E96CEDE92C57AD2400896C0D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CEDE82C57AD2400896C0D /* Logger.swift */; };
@@ -63,6 +64,8 @@
 		E9BFBAC02C58F9E600712627 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */; };
 		E9BFBAC22C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */; };
 		E9BFBAC32C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */; };
+		E9CF09682C5CE7760081636D /* workoutCardAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF09672C5CE7760081636D /* workoutCardAudioView.swift */; };
+		E9CF096A2C5CE7D40081636D /* workoutCardHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF09692C5CE7D40081636D /* workoutCardHolderView.swift */; };
 		E9FB349A2C5A7D7C00ECBCA5 /* connectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB34992C5A7D7C00ECBCA5 /* connectionManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +132,7 @@
 		E90B0A372C1731C300D65BBE /* pulseLL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pulseLL.entitlements; sourceTree = "<group>"; };
 		E90B0A382C1731D900D65BBE /* pulseLLWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pulseLLWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		E90B0A392C17341400D65BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92C5F922C5CEE8E00820B47 /* testCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCard.swift; sourceTree = "<group>"; };
 		E96CEDE32C57A07100896C0D /* WorkoutManageriOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManageriOS.swift; sourceTree = "<group>"; };
 		E96CEDE52C57A7C500896C0D /* WorkoutManagerWatchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManagerWatchOS.swift; sourceTree = "<group>"; };
 		E96CEDE82C57AD2400896C0D /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		E9BCCE782C5A477000C96FD9 /* UserIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManager.swift; sourceTree = "<group>"; };
 		E9BFBABE2C58F9E600712627 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
 		E9BFBAC12C58FF7700712627 /* MetricsTimelineSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsTimelineSchedule.swift; sourceTree = "<group>"; };
+		E9CF09672C5CE7760081636D /* workoutCardAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutCardAudioView.swift; sourceTree = "<group>"; };
+		E9CF09692C5CE7D40081636D /* workoutCardHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutCardHolderView.swift; sourceTree = "<group>"; };
 		E9FB34992C5A7D7C00ECBCA5 /* connectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectionManager.swift; sourceTree = "<group>"; };
 		E9FDAA002C57D71B00249100 /* pulseLLWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pulseLLWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		E9FDAA012C57D73300249100 /* pulseLL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pulseLL.entitlements; sourceTree = "<group>"; };
@@ -310,6 +316,9 @@
 			isa = PBXGroup;
 			children = (
 				E9805FCC2C5BCEFE006C7F19 /* workoutCardView.swift */,
+				E9CF09692C5CE7D40081636D /* workoutCardHolderView.swift */,
+				E9CF09672C5CE7760081636D /* workoutCardAudioView.swift */,
+				E92C5F922C5CEE8E00820B47 /* testCard.swift */,
 			);
 			path = WorkoutCards;
 			sourceTree = "<group>";
@@ -505,6 +514,7 @@
 				E90B0A322C172EF100D65BBE /* pulseLLTabView.swift in Sources */,
 				172CAC7C2C58FF6E00B78C1F /* AudioStreamDecoder.swift in Sources */,
 				17B097EE2C57CC6D009C71FA /* ServerModel.swift in Sources */,
+				E9CF096A2C5CE7D40081636D /* workoutCardHolderView.swift in Sources */,
 				172CAC7A2C58FD4F00B78C1F /* WebSocketManager.swift in Sources */,
 				E9805FCD2C5BCEFE006C7F19 /* workoutCardView.swift in Sources */,
 				E9BFBAC22C58FF7700712627 /* MetricsTimelineSchedule.swift in Sources */,
@@ -517,12 +527,14 @@
 				17E3EBFF2C45310700F6ACB2 /* WorkoutControl.swift in Sources */,
 				E96CEDE42C57A07100896C0D /* WorkoutManageriOS.swift in Sources */,
 				17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */,
+				E92C5F932C5CEE8E00820B47 /* testCard.swift in Sources */,
 				E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */,
 				17D399772C470104005A9180 /* PolarAPI.swift in Sources */,
 				176DECE52C5CE1E100670EB5 /* OnboardingLoadAnimation.swift in Sources */,
 				E96CEDE92C57AD2400896C0D /* Logger.swift in Sources */,
 				E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */,
 				E9BCCE792C5A477000C96FD9 /* UserIDManager.swift in Sources */,
+				E9CF09682C5CE7760081636D /* workoutCardAudioView.swift in Sources */,
 				E9BFBABF2C58F9E600712627 /* ElapsedTimeView.swift in Sources */,
 				17D399792C470BE9005A9180 /* DeviceSearchView.swift in Sources */,
 				1787C78A2C5796700063EA53 /* AudioStreamManager.swift in Sources */,
@@ -551,7 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/pulseLLWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = UUPN4RSGCH;
+				DEVELOPMENT_TEAM = FY482T2YCZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "pulseLLWatch-Watch-App-Info.plist";
@@ -587,7 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/pulseLLWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = UUPN4RSGCH;
+				DEVELOPMENT_TEAM = FY482T2YCZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "pulseLLWatch-Watch-App-Info.plist";
@@ -743,7 +755,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
-				DEVELOPMENT_TEAM = UUPN4RSGCH;
+				DEVELOPMENT_TEAM = FY482T2YCZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;
@@ -781,7 +793,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
-				DEVELOPMENT_TEAM = UUPN4RSGCH;
+				DEVELOPMENT_TEAM = FY482T2YCZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;

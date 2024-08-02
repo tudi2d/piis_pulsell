@@ -17,7 +17,7 @@ class WorkoutManager: NSObject, ObservableObject {
     }
     
     @Published var sessionState: HKWorkoutSessionState = .notStarted
-    @Published var heartRate: Double = 0
+    @Published var heartRate: Double = 62
     @Published var elapsedTimeInterval: TimeInterval = 0
     @Published var workout: HKWorkout?
     @Published var workoutType: HKWorkoutActivityType = .running
@@ -138,7 +138,7 @@ extension WorkoutManager {
         #endif
         workout = nil
         session = nil
-        heartRate = 0
+        heartRate = 61
         distance = 0
         sessionState = .notStarted
         //songGenre = "ResetGenre"

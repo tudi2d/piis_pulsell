@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
+    @StateObject private var serverModel = VitalParametersViewModel()
     @State private var path = NavigationPath()
     @State private var selectedWorkout = "Running"
     @State private var selectedGenre = "Techno"
@@ -42,7 +43,8 @@ struct OnboardingView: View {
                     
                     Button(action: {
                         generating = true
-                        UIUtils.executeAfterDelay(delay: 8.0) {
+                        serverModel.sendVitalParameters(heartRate: 51, songGenre: workoutManager.songGenre, workoutType: workoutManager.workoutType)
+                        UIUtils.executeAfterDelay(delay: 10.0) {
                             navigateToWorkout = true
                         }
                     }, label: {

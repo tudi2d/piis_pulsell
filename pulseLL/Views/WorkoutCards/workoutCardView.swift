@@ -10,35 +10,37 @@ import os
 import SwiftUI
 
 struct WorkoutCardView : View {
+    var recap: Recap
     var body: some View {
-                    VStack(){
-                        HStack(){
-                            Text("Workout1")
-                            Spacer()
-                        }
-                        .padding()
-                        ZStack{
-                            Rectangle()
-                                .fill(Color.gray.opacity(0.7))
-                                .frame(height: 100)
-                                .cornerRadius(10)
-                                .padding(.horizontal)
-                            Image("test")
-                                .resizable()
-                                .frame(height: 50)
-                                .opacity(0.9)
-                            
-                        }
-                    }
-                    .padding()
-                    .cornerRadius(25)
-                    .foregroundColor(.black)
-                    .background(Color.gray.opacity(0.2))
+        ZStack{
+            Rectangle()
+                .fill(Color.gray.opacity(0.7))
+                .frame(height: 100)
+                .cornerRadius(15)
+            Image("test")
+                .resizable()
+                .frame(height: 50)
+                .opacity(0.9)
+            HStack{
+                Spacer()
+                Text(recap.genre)
+                    .font(.body)
+                Spacer()
+                Text(recap.time)
+                    .font(.body)
+                Spacer()
+                Text(String(recap.bpm) + "bpm")
+                    .font(.body)
+                Spacer()
+            }
+            
         }
+        .padding(.horizontal)
     }
+}
 
 struct WorkoutCardView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutCardView()
+        WorkoutCardView( recap: recaps[0])
     }
 }

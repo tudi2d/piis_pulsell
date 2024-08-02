@@ -27,6 +27,7 @@ struct WorkoutControl: View {
                     withAnimation(.bouncy(duration:0.5)) {
                         degreesTilted = degreesTilted + 360
                     }
+                    audioStreamModel.startStream(from: URL(string: "https://172.20.10.2:9610/playlist.m3u8")!)
                     print("Regenerate")
                 }) {
                     Image(systemName: "arrow.clockwise.circle.fill")
@@ -46,10 +47,8 @@ struct WorkoutControl: View {
                         }
                         isPaused = true
                     } else if (isPaused){
-                        if URL(string: "http://10.181.216.240:9610/playlist.m3u8") != nil {
-                            Logger.shared.log("Starting audio stream")
-                            audioStreamModel.unmuteStream()
-                        }
+                        Logger.shared.log("Starting audio stream")
+                        audioStreamModel.unmuteStream()
                         if(workoutManager.sessionState == .paused){
                             Logger.shared.log("Resuming workout")
                             session?.resume()
@@ -83,7 +82,8 @@ struct WorkoutControl: View {
             .foregroundColor(.black)
         }
         .onAppear(){
-            audioStreamModel.startStream(from: URL(string: "http://10.181.216.240:9610/playlist.m3u8")!)
+            print("Audio stream triggered")
+            audioStreamModel.startStream(from: URL(string: "http://10.181.216.240:9610/playlist.m3u8")!) //"https://dispatcher.rndfnk.com/br/br24/live/mp3/mid"
         }
     }
 }
