@@ -11,6 +11,8 @@
 		1709ED372C45A22A00A83FF2 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */; };
 		172CAC7A2C58FD4F00B78C1F /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CAC792C58FD4F00B78C1F /* WebSocketManager.swift */; };
 		172CAC7C2C58FF6E00B78C1F /* AudioStreamDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CAC7B2C58FF6E00B78C1F /* AudioStreamDecoder.swift */; };
+		176DECE32C5CDF6E00670EB5 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DECE22C5CDF6E00670EB5 /* UIUtils.swift */; };
+		176DECE52C5CE1E100670EB5 /* OnboardingLoadAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DECE42C5CE1E100670EB5 /* OnboardingLoadAnimation.swift */; };
 		1787C78A2C5796700063EA53 /* AudioStreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787C7892C5796700063EA53 /* AudioStreamManager.swift */; };
 		1796163C2C4671D400A5B474 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796163B2C4671D400A5B474 /* LocationManager.swift */; };
 		17AB045E2C5BC8A0002F067B /* OnboardingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AB045D2C5BC8A0002F067B /* OnboardingMap.swift */; };
@@ -93,6 +95,8 @@
 		1709ED362C45A22A00A83FF2 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		172CAC792C58FD4F00B78C1F /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 		172CAC7B2C58FF6E00B78C1F /* AudioStreamDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamDecoder.swift; sourceTree = "<group>"; };
+		176DECE22C5CDF6E00670EB5 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		176DECE42C5CE1E100670EB5 /* OnboardingLoadAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLoadAnimation.swift; sourceTree = "<group>"; };
 		1787C7892C5796700063EA53 /* AudioStreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamManager.swift; sourceTree = "<group>"; };
 		1796163B2C4671D400A5B474 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		17AB045D2C5BC8A0002F067B /* OnboardingMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingMap.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				E90B0A252C171FA900D65BBE /* WatchConnector.swift */,
 				1709ED342C45A02100A83FF2 /* HealthKitUtils.swift */,
 				172CAC7B2C58FF6E00B78C1F /* AudioStreamDecoder.swift */,
+				176DECE22C5CDF6E00670EB5 /* UIUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				17E3EBF22C4522D100F6ACB2 /* OnboardingView.swift */,
 				17E3EBF42C45254F00F6ACB2 /* OnboardingDropdown.swift */,
 				17AB045D2C5BC8A0002F067B /* OnboardingMap.swift */,
+				176DECE42C5CE1E100670EB5 /* OnboardingLoadAnimation.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -485,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B097F02C57CCB1009C71FA /* NetworkManager.swift in Sources */,
+				176DECE32C5CDF6E00670EB5 /* UIUtils.swift in Sources */,
 				E9953FAF2C16FA070035C836 /* HomeView.swift in Sources */,
 				E96CEDEF2C57C72F00896C0D /* ButtonLabel.swift in Sources */,
 				17EA44862C4146E5000F3AC4 /* Workout.swift in Sources */,
@@ -512,6 +519,7 @@
 				17EA44882C414AD8000F3AC4 /* ModelData.swift in Sources */,
 				E9953FAD2C16FA070035C836 /* pulseLLApp.swift in Sources */,
 				17D399772C470104005A9180 /* PolarAPI.swift in Sources */,
+				176DECE52C5CE1E100670EB5 /* OnboardingLoadAnimation.swift in Sources */,
 				E96CEDE92C57AD2400896C0D /* Logger.swift in Sources */,
 				E90B0A362C172F0B00D65BBE /* HeartRateView.swift in Sources */,
 				E9BCCE792C5A477000C96FD9 /* UserIDManager.swift in Sources */,
@@ -543,7 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/pulseLLWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "pulseLLWatch-Watch-App-Info.plist";
@@ -579,7 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/pulseLLWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "pulseLLWatch-Watch-App-Info.plist";
@@ -735,7 +743,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;
@@ -773,7 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pulseLL/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = UUPN4RSGCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pulseLL/Info.plist;

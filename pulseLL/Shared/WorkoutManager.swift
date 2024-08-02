@@ -21,7 +21,7 @@ class WorkoutManager: NSObject, ObservableObject {
     @Published var elapsedTimeInterval: TimeInterval = 0
     @Published var workout: HKWorkout?
     @Published var workoutType: HKWorkoutActivityType = .running
-    @Published var songGenre: String = "Genre"
+    @Published var songGenre: String = "Techno"
     @Published var distance: Double = 0
     //More health data can be added later here(Must be added to Share/Read and WorkoutManager Extension)
     

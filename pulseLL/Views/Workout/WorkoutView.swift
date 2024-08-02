@@ -22,7 +22,6 @@ struct WorkoutView: View {
                 let schedule = MetricsTimelineSchedule(from: fromDate, isPaused: workoutManager.sessionState == .paused)
                 TimelineView(schedule) { context in
                     VStack {
-                        Spacer(minLength: 25)
                         WorkoutStats(bpm: Int(workoutManager.heartRate), genre: workoutManager.songGenre, time: headerView(context: context), distance: workoutManager.distance)
                         WorkoutMap()
                         WorkoutControl()
@@ -32,13 +31,16 @@ struct WorkoutView: View {
                     .zIndex(1.0)
                 }
             }
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.leading)
+            .edgesIgnoringSafeArea(.trailing)
+            .edgesIgnoringSafeArea(.bottom)
             .navigationBarHidden(true)
             .onAppear{
                 if !workoutManager.sessionState.isActive {
                     startRunningOnWatch()
                 }
                 didStartWorkout = true
+                serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate), songGenre: workoutManager.songGenre, workoutType: workoutManager.workoutType)
             }
             .onChange(of: workoutManager.heartRate, {
                 serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate), songGenre: workoutManager.songGenre, workoutType: workoutManager.workoutType)

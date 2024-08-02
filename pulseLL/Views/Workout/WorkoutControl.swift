@@ -46,7 +46,7 @@ struct WorkoutControl: View {
                         }
                         isPaused = true
                     } else if (isPaused){
-                        if let url = URL(string: "http://10.181.216.240:9610/playlist.m3u8") {
+                        if URL(string: "http://10.181.216.240:9610/playlist.m3u8") != nil {
                             Logger.shared.log("Starting audio stream")
                             audioStreamModel.unmuteStream()
                         }

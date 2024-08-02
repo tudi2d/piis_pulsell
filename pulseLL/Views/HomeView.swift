@@ -9,6 +9,11 @@ import SwiftUI
 import HealthKit
 import HealthKitUI
 
+let blueTristan = UIUtils.hexStringToColor(hex: "#5469ef")
+let purpleTristan = UIUtils.hexStringToColor(hex: "#cc84f6")
+let gradient = LinearGradient(gradient:
+                                Gradient(colors:[blueTristan, purpleTristan]),
+                                         startPoint: .leading, endPoint: .trailing)
 
 struct HomeView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
@@ -45,10 +50,10 @@ struct HomeView: View {
                             .frame(width: 50, height: 50)
                     }
                     .padding()
-                    .background(Color.gray.opacity(0.7))
+                    .background(gradient)
                     .cornerRadius(20)
                     .padding()
-                    .foregroundColor(.white)
+                .foregroundColor(.white)
                 }
                 
                 RecapList()
@@ -69,7 +74,7 @@ struct HomeView: View {
                      print("\(error) for authorization")
                  }
              })
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

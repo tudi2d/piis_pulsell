@@ -12,6 +12,8 @@ struct OnboardingView: View {
     @State private var path = NavigationPath()
     @State private var selectedWorkout = "Running"
     @State private var selectedGenre = "Techno"
+    @State private var generating = false
+    @State private var navigateToWorkout = false
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -38,24 +40,42 @@ struct OnboardingView: View {
                     
                     Spacer()
                     
-                    NavigationLink{WorkoutView()}label: {
-                        Image(systemName: "record.circle.fill")
-                            .resizable()
-                            .frame(width: 70, height: 70)
-                            .padding(.trailing)
-                            .foregroundColor(.black)
-                    }
+                    Button(action: {
+                        generating = true
+                        UIUtils.executeAfterDelay(delay: 8.0) {
+                            navigateToWorkout = true
+                        }
+                    }, label: {
+                        if generating{
+                            VStack {
+                                AnimationView().frame(maxWidth: 20, maxHeight: 20)
+                                Text("Generating...")
+                                    .padding(.top)
+                                    .tint(.black)
+                            }
+                        }
+                        else{
+                            Image(systemName: "record.circle.fill")
+                                .resizable()
+                                .frame(width: 70, height: 70)
+                                .padding(.trailing)
+                                .foregroundColor(.black)
+                        }
+                    })
                     .padding(.bottom, 50)
+                    
                 }
                 .padding(.top, 50)
                 .background(.white.opacity(0.7))
                 
                 OnboardingMap().zIndex(-1)
             }
-            .padding(.top, 50)
             .onAppear(){
                 workoutManager.songGenre = "Techno"
                 workoutManager.workoutType = .running
+            }
+            .navigationDestination(isPresented: $navigateToWorkout) {
+                WorkoutView()
             }
         }
     }

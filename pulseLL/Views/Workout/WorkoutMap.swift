@@ -37,12 +37,12 @@ struct WorkoutMap: View {
     }
     
     var body: some View {
-        Map(position: $cameraPosition, interactionModes: .rotate){
+        Map(position: $cameraPosition, interactionModes: .all){
                 UserAnnotation()
             
                 if let route {
                     MapPolyline(route.polyline)
-                        .stroke(.gray, lineWidth: 8)
+                        .stroke(.black.opacity(0.7), lineWidth: 8)
                 }
             }
         .onAppear {
