@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import Combine
+import os
 
 class AudioStreamManager: ObservableObject {
     @Published var isPlaying: Bool = false
@@ -19,6 +20,7 @@ class AudioStreamManager: ObservableObject {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback)
             try AVAudioSession.sharedInstance().setActive(true)
+            Logger.shared.log("Audio Stream Mnager is set up!")
         } catch {
             print("Failed to set audio session category. Error: \(error)")
         }

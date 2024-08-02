@@ -23,10 +23,10 @@ struct WorkoutCardView : View {
                                 .frame(height: 100)
                                 .cornerRadius(10)
                                 .padding(.horizontal)
-                            Image("soundwave")
+                            Image("test")
                                 .resizable()
                                 .frame(height: 50)
-                                .opacity(0.6)
+                                .opacity(0.9)
                             
                         }
                     }

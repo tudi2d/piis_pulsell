@@ -141,7 +141,7 @@ extension WorkoutManager {
         heartRate = 0
         distance = 0
         sessionState = .notStarted
-        songGenre = "Genre"
+        //songGenre = "ResetGenre"
     }
     
     func sendData(_ data: Data) async {
