@@ -23,7 +23,7 @@ struct WorkoutStats<TimeView: View>: View {
                     TimeSupportView(time: time)
                         .frame(maxWidth: .infinity, maxHeight: 100)
                         .background(Color.white)
-                    StatView(label: String(format: "%.2f", distance), subLabel: "km")
+                    StatView(label: String(format: "%.2f", distance / 1000), subLabel: "km")
                 }
             }
             .background(Color(UIColor.systemGray6))
