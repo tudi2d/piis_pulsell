@@ -10,6 +10,12 @@ import os
 import SwiftUI
 
 struct WorkoutCardAudioView : View {
+    var imageNames: [String] {
+            (1...40).map { "wave_\($0)" }
+        }
+    var randomImageName: String {
+            imageNames.randomElement() ?? "wave_1"
+        }
     var recap: Recap
     var audioManager = AudioManager()
     var body: some View {
@@ -18,7 +24,7 @@ struct WorkoutCardAudioView : View {
                 .fill(Color.white)
                 .frame(height: 100)
                 .cornerRadius(15)
-            Image("test")
+            Image(randomImageName)
                 .resizable()
                 .frame(height: 50)
                 .opacity(0.9)

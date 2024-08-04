@@ -30,7 +30,7 @@ struct HomeView: View {
                         .fontWeight(.bold)
                         .padding(.leading)
                     Spacer()
-                    Image(systemName: "person.circle")
+                    Image("lama")
                         .resizable()
                         .frame(width: 32, height: 32)
                         .padding(.trailing)

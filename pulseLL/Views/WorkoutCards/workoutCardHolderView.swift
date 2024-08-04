@@ -39,6 +39,7 @@ struct WorkoutCardHolderView : View {
                     }
                     .tabViewStyle(PageTabViewStyle())
                     .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(Color.black)
                 }
             }
             .padding()
