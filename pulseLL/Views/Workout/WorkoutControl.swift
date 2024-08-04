@@ -7,13 +7,16 @@
 
 import SwiftUI
 import os
+import AVFoundation
 
 // http://10.181.216.240:5000
 
 struct WorkoutControl: View {
     @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var networkManager: NetworkManager
+    @StateObject private var serverModel = VitalParametersViewModel()
     @StateObject private var audioStreamModel = AudioStreamManager()
-    private let networkManager = NetworkManager()
+    @StateObject var audioManager = AudioManager()
     @State private var isPaused = false
     @State private var returnToStartView = false
     @State private var degreesTilted = 0.0
@@ -27,8 +30,10 @@ struct WorkoutControl: View {
                     withAnimation(.bouncy(duration:0.5)) {
                         degreesTilted = degreesTilted + 360
                     }
-                    audioStreamModel.startStream(from: URL(string: "https://172.20.10.2:9610/playlist.m3u8")!)
+                    //audioStreamModel.startStream(from: URL(string: "https://172.20.10.2:9610/playlist.m3u8")!)
                     print("Regenerate")
+                    serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate), songGenre: workoutManager.songGenre, workoutType: workoutManager.workoutType, regenerate:true)
+                    
                 }) {
                     Image(systemName: "arrow.clockwise.circle.fill")
                         .resizable()
@@ -40,7 +45,7 @@ struct WorkoutControl: View {
                     let session = workoutManager.session
                     if (!isPaused) {
                         Logger.shared.log("Stopping audio stream")
-                        audioStreamModel.muteStream()
+                        audioManager.muteStream()
                         if(workoutManager.sessionState == .running){
                             Logger.shared.log("Pausing workout")
                             session?.pause()
@@ -48,7 +53,7 @@ struct WorkoutControl: View {
                         isPaused = true
                     } else if (isPaused){
                         Logger.shared.log("Starting audio stream")
-                        audioStreamModel.unmuteStream()
+                        audioManager.unmuteStream()
                         if(workoutManager.sessionState == .paused){
                             Logger.shared.log("Resuming workout")
                             session?.resume()
@@ -82,9 +87,14 @@ struct WorkoutControl: View {
             .foregroundColor(.black)
         }
         .onAppear(){
-            print("Audio stream triggered")
-            audioStreamModel.startStream(from: URL(string: "http://10.181.216.240:9610/playlist.m3u8")!) //"https://dispatcher.rndfnk.com/br/br24/live/mp3/mid"
+            print("Audio triggered with# \(networkManager.audioData ?? "Error")")
+            audioManager.startAudio(fileName: networkManager.audioData ?? "intro_ran1_120")
         }
+        .onChange(of: networkManager.audioData, {
+            audioManager.deactivateSession()
+            audioManager.startAudio(fileName: networkManager.audioData ?? "dubstep_ran1_120")
+            print("Replaced Audio")
+        })
     }
 }
 

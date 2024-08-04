@@ -10,7 +10,7 @@ import SwiftUI
 struct RecapList: View {
     var body: some View {
         List(recaps){recap in
-            RecapItem(recap: recap)
+            WorkoutCardHolderView(recap: recap)
                 .listRowSeparator(.hidden)
         }
         .listStyle(.plain)

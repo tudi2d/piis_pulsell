@@ -11,30 +11,40 @@ import SwiftUI
 
 struct WorkoutCardHolderView : View {
     var recap: Recap
+    
     var body: some View {
-        VStack(){
-            HStack(){
-                Text(recap.title)
-                    .font(.headline)
-                    .padding(.leading)
-                Spacer()
-            }
-            ZStack{
-                TabView {
-                    WorkoutCardView(recap: recaps[0])
-                        .padding(.horizontal)
-                    
-                    WorkoutCardView(recap: recaps[0])
-                        .padding(.horizontal)
+        let blueTristan = UIUtils.hexStringToColor(hex: "#5469ef")
+        let purpleTristan = UIUtils.hexStringToColor(hex: "#cc84f6")
+        let grayTristan = UIUtils.hexStringToColor(hex: "#292929")
+        let gradient = LinearGradient(gradient:
+                                        Gradient(colors:[blueTristan, purpleTristan]),
+                                                 startPoint: .leading, endPoint: .trailing)
+        ZStack{
+            VStack(){
+                HStack(){
+                    Text(recap.title)
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .padding(.leading)
+                        .fontWeight(.semibold)
+                    Spacer()
                 }
-                .tabViewStyle(PageTabViewStyle())
-                .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                ZStack{
+                    TabView {
+                        WorkoutCardView(recap: recap)
+                            .padding(.horizontal)
+                        
+                        WorkoutCardAudioView(recap: recap)
+                            .padding(.horizontal)
+                    }
+                    .tabViewStyle(PageTabViewStyle())
+                    .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                }
             }
+            .padding()
+            .background(gradient.opacity(0.7))
+            .cornerRadius(20)
         }
-        .padding()
-        .cornerRadius(25)
-        .foregroundColor(.black)
-        .background(Color.gray.opacity(0.2))
     }
 }
 

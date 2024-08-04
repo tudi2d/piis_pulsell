@@ -17,6 +17,7 @@ let gradient = LinearGradient(gradient:
 
 struct HomeView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var networkManager: NetworkManager
     @State private var didStartWorkout = false
     @State private var triggerAuthorization = false
     

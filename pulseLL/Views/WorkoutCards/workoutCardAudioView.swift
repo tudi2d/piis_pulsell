@@ -11,50 +11,31 @@ import SwiftUI
 
 struct WorkoutCardAudioView : View {
     var recap: Recap
+    var audioManager = AudioManager()
     var body: some View {
-                    VStack(){
-                        HStack(){
-                            Text(recap.title)
-                                .font(.headline)
-                                .padding(.leading)
-                            Spacer()
-                        }
-                        ZStack{
-                            Rectangle()
-                                .fill(Color.gray.opacity(0.7))
-                                .frame(height: 100)
-                                .cornerRadius(15)
-                            Image("test")
-                                .resizable()
-                                .frame(height: 50)
-                                .opacity(0.9)
-                            HStack{
-                                Spacer()
-                                Text(recap.genre)
-                                    .font(.body)
-                                Spacer()
-                                Text(recap.time)
-                                    .font(.body)
-                                Spacer()
-                                Text(String(recap.bpm) + "bpm")
-                                    .font(.body)
-                                Spacer()
-                            }
-                            
-                        }
-                        .padding(.horizontal)
-
-                    }
-                    .padding()
-                    .cornerRadius(25)
-                    .foregroundColor(.black)
-                    .background(Color.gray.opacity(0.2))
+        ZStack{
+            Rectangle()
+                .fill(Color.white)
+                .frame(height: 100)
+                .cornerRadius(15)
+            Image("test")
+                .resizable()
+                .frame(height: 50)
+                .opacity(0.9)
+            HStack{
+                Spacer()
+                Text(String("00:00"))
+                Spacer()
+            }
+            
+            Spacer()
         }
     }
+}
 
-struct WorkoutCardView2_Previews: PreviewProvider {
+struct WorkoutCardAudioView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutCardView( recap: recaps[0])
+        WorkoutCardAudioView( recap: recaps[0])
     }
 }
 

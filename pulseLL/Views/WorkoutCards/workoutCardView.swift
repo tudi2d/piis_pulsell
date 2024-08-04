@@ -14,7 +14,7 @@ struct WorkoutCardView : View {
     var body: some View {
         ZStack{
             Rectangle()
-                .fill(Color.gray.opacity(0.7))
+                .fill(Color.white)
                 .frame(height: 100)
                 .cornerRadius(15)
             Image("test")
@@ -25,17 +25,19 @@ struct WorkoutCardView : View {
                 Spacer()
                 Text(recap.genre)
                     .font(.body)
+                    .fontWeight(.semibold)
                 Spacer()
                 Text(recap.time)
                     .font(.body)
+                    .fontWeight(.semibold)
                 Spacer()
                 Text(String(recap.bpm) + "bpm")
                     .font(.body)
+                    .fontWeight(.semibold)
                 Spacer()
             }
             
         }
-        .padding(.horizontal)
     }
 }
 

@@ -10,12 +10,14 @@ import SwiftUI
 @main
 struct pulseLLApp: App {
     private let workoutManager = WorkoutManager.shared
+    private let networkManager = NetworkManager.shared
     
     var body: some Scene {
         WindowGroup {
             if UIDevice.current.userInterfaceIdiom == .phone {
                 HomeView()
                     .environmentObject(workoutManager)
+                    .environmentObject(networkManager)
             } else {
                 HomeView()
             }

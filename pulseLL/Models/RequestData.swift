@@ -14,4 +14,5 @@ struct VitalParameters: Codable {
     let user_id: String //UUID
     let workout_id: Int //5-digit number
     let activity_type: String // running, cycling, hiking
+    let regenerate: Bool
 }

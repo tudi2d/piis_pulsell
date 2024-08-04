@@ -13,11 +13,11 @@ class VitalParametersViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
 
-    private let networkManager = NetworkManager()
+    private let networkManager = NetworkManager.shared
     let workoutManager = WorkoutManager.shared
     
     
-    func sendVitalParameters(heartRate: Int, songGenre: String, workoutType: HKWorkoutActivityType) {
+    func sendVitalParameters(heartRate: Int, songGenre: String, workoutType: HKWorkoutActivityType, regenerate: Bool){
         let timestamp = Int(Date().timeIntervalSince1970)
         let userID = UserIDManager.shared.getUserID()
         
@@ -32,7 +32,7 @@ class VitalParametersViewModel: ObservableObject {
         }
         
         isLoading = true
-        networkManager.postVitalParameters(heartRate: heartRate, unixTimestamp: timestamp, songGenre: songGenre, userID: userID, activityType: activityType) { [weak self] result in
+        networkManager.postVitalParameters(heartRate: heartRate, unixTimestamp: timestamp, songGenre: songGenre, userID: userID, activityType: activityType, regenerate: regenerate) { [weak self] result in
             DispatchQueue.main.async {
                 self?.isLoading = false
                 switch result {

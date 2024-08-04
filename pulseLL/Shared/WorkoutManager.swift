@@ -23,6 +23,7 @@ class WorkoutManager: NSObject, ObservableObject {
     @Published var workoutType: HKWorkoutActivityType = .running
     @Published var songGenre: String = "Techno"
     @Published var distance: Double = 0
+    @Published var regenerate: Bool = false
     //More health data can be added later here(Must be added to Share/Read and WorkoutManager Extension)
     
     let typesToShare: Set = [HKQuantityType.workoutType()]

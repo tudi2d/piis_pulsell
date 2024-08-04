@@ -11,6 +11,7 @@ import SwiftUI
 
 struct WorkoutView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var networkManager: NetworkManager
     @StateObject private var serverModel = VitalParametersViewModel()
     @StateObject var bleSdkManager = PolarBleSdkManager()
     @State private var didStartWorkout = false
@@ -42,7 +43,7 @@ struct WorkoutView: View {
                 didStartWorkout = true
             }
             .onChange(of: workoutManager.heartRate, {
-                serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate), songGenre: workoutManager.songGenre, workoutType: workoutManager.workoutType)
+                serverModel.sendVitalParameters(heartRate: Int(workoutManager.heartRate), songGenre: workoutManager.songGenre, workoutType: workoutManager.workoutType, regenerate: workoutManager.regenerate)
             })
         }
     }
