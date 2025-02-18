@@ -97,12 +97,12 @@ class WorkoutManager: NSObject, ObservableObject {
             anchor: nil,
             limit: HKObjectQueryNoLimit
         ) { query, samples, deletedObjects, newAnchor, error in
-            self.process(samples)
+            // self.process(samples)
         }
         
-        query.updateHandler = { [weak self] query, samples, deletedObjects, newAnchor, error in
-            self?.process(samples)
-        }
+        // query.updateHandler = { [weak self] query, samples, deletedObjects, newAnchor, error in
+        //     self?.process(samples)
+        // }
         
         healthStore.execute(query)
     }

@@ -35,6 +35,8 @@ struct HomeView: View {
                         .frame(width: 32, height: 32)
                         .padding(.trailing)
                 }
+                Spacer()
+                Spacer()
                 NavigationLink{
                     OnboardingView()
                 } label: {
@@ -51,7 +53,7 @@ struct HomeView: View {
                             .frame(width: 50, height: 50)
                     }
                     .padding()
-                    .background(gradient)
+                    .background(Color.gray.opacity(0.7))
                     .cornerRadius(20)
                     .padding()
                 .foregroundColor(.white)

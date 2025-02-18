@@ -81,6 +81,7 @@ struct OnboardingView: View {
             .navigationDestination(isPresented: $navigateToWorkout) {
                 WorkoutView()
             }
+            .toolbar(.hidden)
         }
     }
 }
